@@ -30,7 +30,9 @@ Cross-site Request Forgery (CSRF) - is an attack that forces an end user to exec
 
 Cross-Origin Resource Sharing (CORS) - is a browser mechanism which enables controlled access to resources located outside of a given domain. It extends and adds flexibility to the same-origin policy (SOP). However, it also provides potential for cross-domain attacks, if a website's CORS policy is poorly configured and implemented. CORS is not a protection against cross-origin attacks such as cross-site request forgery (CSRF)
 
-https://securityzines.com/assets/img/flyers/downloads/cors.png
+Source: https://securityzines.com/
+Image Credits: 
+![cors](https://user-images.githubusercontent.com/16838353/196784777-b5ab1c7a-46e9-465f-82c9-4749617dfdd6.png)
 
 ## Directory traversal or Path Traversal
 
