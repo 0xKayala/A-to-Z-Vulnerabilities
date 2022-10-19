@@ -5,9 +5,9 @@
 ## Contents
 
 - [Broken Access Control](#Broken-Access-Control)
-    - [Insecure Direct Object Reference (IDOR)](#Insecure-Direct-Object-Reference-(IDOR))
-    - [Cross-site Request Forgery (CSRF)](#Cross-site-Request-Forgery-(CSRF))
-    - [Cross-Origin Resource Sharing (CORS)](#Cross-Origin-Resource-Sharing-(CORS))
+    - [Insecure Direct Object Reference (IDOR)](#Insecure-Direct-Object-Reference)
+    - [Cross-site Request Forgery (CSRF)](#Cross-site-Request-Forgery)
+    - [Cross-Origin Resource Sharing (CORS)](#Cross-Origin-Resource-Sharing)
     - [Directory traversal or Path Traversal](#Directory-traversal-or-Path-Traversal)
     - [Forced browsing](#Forced-browsing)
 
