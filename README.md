@@ -22,6 +22,11 @@ Broken access control means that an attackers can gain access to user accounts a
 
 Insecure Direct Object Reference (IDOR) - This vulnerability happens when the application doesn’t properly validate access to resources through IDs. For example, an application shows a purchase order to the customer using the /orders/1234 endpoint. However, the user whose order id is 1234 can also access other orders by simply changing the order id. This is the simplest scenario, but there are many other techniques to exploit an IDOR vulnerability
 
+Source: https://securityzines.com/
+Image Credits: https://twitter.com/sec_r0
+
+![idor](https://user-images.githubusercontent.com/16838353/196786238-4f9b3874-c0bf-413f-972d-eb8c688fb013.jpg)
+
 ## Cross-site Request Forgery
 
 Cross-site Request Forgery (CSRF) - is an attack that forces an end user to execute unwanted actions on a web application in which they’re currently authenticated. Using CSRF, a hacker can forge a request from a legitimate website to the unsuspecting logged in user. By sending this forged link via email or chat, an attacker can trick the users of a web application into executing actions of the attacker’s choosing
@@ -32,6 +37,7 @@ Cross-Origin Resource Sharing (CORS) - is a browser mechanism which enables cont
 
 Source: https://securityzines.com/
 Image Credits: https://twitter.com/sec_r0
+
 ![cors](https://user-images.githubusercontent.com/16838353/196784777-b5ab1c7a-46e9-465f-82c9-4749617dfdd6.png)
 
 ## Directory traversal or Path Traversal
