@@ -1,10 +1,10 @@
 # A-to-Z-Vulnerabilities [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> This is a Kind of Dictionary which contains about all kinds of Web Application Vulnerabilities
+> This is a Kind of Dictionary which contains about all kinds of Web Application Vulnerabilities in Alphabetical Order
 
 ## Contents
 
-- [Recon](#Recon)
+- [Broken Access Control](#Broken-Access-Control)
     - [Subdomain Enumeration](#Subdomain-Enumeration)
     - [Port Scanning](#Port-Scanning)
     - [Screenshots](#Screenshots)
@@ -16,9 +16,9 @@
 
 ---
 
-## Recon
+## Broken Access Control
 
-Lorem ipsum dolor sit amet
+Broken access control means that an attackers can gain access to user accounts and act as users or administrators by which he can gain unintended privileged functions. In Simple terms, broken access control happens when the application allows a user to perform unauthorized actions. There are many vulnerabilities which contribute to this risk, For instance, if the developer forgets to validate permissions when dealing with identifiers, the application becomes vulnerable to Insecure Direct Object Reference (IDOR). Other vulnerabilities include Cross-site Request Forgery (CSRF), Cross-Origin Resource Sharing (CORS) misconfigurations, directory traversal and forced browsing
 
 ### Subdomain Enumeration
 
