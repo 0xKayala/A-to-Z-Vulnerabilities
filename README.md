@@ -186,6 +186,7 @@ Attackers can exploit this to potentially introduce unauthorized access, malicio
 2) Code injection
 3) Command execution
 4) Denial of Service
+
 The SolarWinds Orion attack in which highly targeted malicious updates were distributed to more than 18,000 organizations is one of the most significant breaches of this nature.
 
 ## Vulnerable and Outdated components
