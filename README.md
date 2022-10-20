@@ -8,6 +8,7 @@
 - [Broken Access Control](#Broken-Access-Control)
 - [Cross-site Request Forgery](#Cross-site-Request-Forgery)
 - [Cross-Origin Resource Sharing](#Cross-Origin-Resource-Sharing)
+- [Cryptographic Failures](#Cryptographic-Failures)
 - [Directory traversal or Path Traversal](#Directory-traversal-or-Path-Traversal)
 - [Forced browsing](#Forced-browsing)
 - [Insecure Direct Object Reference](#Insecure-Direct-Object-Reference)
@@ -44,6 +45,10 @@ Source: https://securityzines.com/ |
 Image Credits: https://twitter.com/sec_r0
 
 ![cors](https://user-images.githubusercontent.com/16838353/196784777-b5ab1c7a-46e9-465f-82c9-4749617dfdd6.png)
+
+## Cryptographic Failures
+
+A cryptographic failure is a critical web application security vulnerability that exposes sensitive application data on a weak or non-existent cryptographic algorithm. These can be passwords, patient health records, business secrets, credit card information, email addresses, or other personal user information. Apart from exposing sensitive information, as cryptographic failures can also compromise systems, the implications of this vulnerability are considered one of the most critical security risks for both organizations and business users
 
 ## Directory traversal or Path Traversal
 
