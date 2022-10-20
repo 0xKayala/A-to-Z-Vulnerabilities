@@ -16,6 +16,9 @@
 - [Code Injection](#Code-Injection)
 - [Command injection](#Command-injection)
 - [Directory traversal or Path Traversal](#Directory-traversal-or-Path-Traversal)
+- [File Inclusion](#File-Inclusion)
+    - [Local File Inclusion](#Local-File-Inclusion)
+    - [Remote File Inclusion](#Remote-File-Inclusion)
 - [Forced browsing](#Forced-browsing)
 - [Injection](#Injection)
 - [Insecure Direct Object Reference](#Insecure-Direct-Object-Reference)
@@ -113,6 +116,34 @@ Sometimes web applications need to call a system command on the webserver that i
 ## Directory traversal or Path Traversal
 
 Directory traversal (also known as file path traversal) is a web security vulnerability that allows an attacker to read arbitrary files on the server that is running an application. This might include application code and data, credentials for back-end systems, and sensitive operating system files. In some cases, an attacker might be able to write to arbitrary files on the server, allowing them to modify application data or behavior, and ultimately take full control of the server.
+
+## File Inclusion
+
+The File Inclusion vulnerability allows an attacker to include a file, usually exploiting a “dynamic file inclusion” mechanisms implemented in the target application. The vulnerability occurs due to the use of user-supplied input without proper validation.
+This can lead to something as outputting the contents of the file, but depending on the severity, it can also lead to:
+
+1) Code execution on the web server
+2) Code execution on the client-side such as JavaScript which can lead to other attacks such as cross site scripting (XSS)
+3) Denial of Service (DoS)
+4) Sensitive Information Disclosure
+
+### Local File Inclusion
+
+Local file inclusion (also known as LFI) is the process of including files, that are already locally present on the server, through the exploiting of vulnerable inclusion procedures implemented in the application. This vulnerability occurs, for example, when a page receives, as input, the path to the file that has to be included and this input is not properly sanitized, allowing directory traversal characters (such as dot-dot-slash) to be injected. Although most examples point to vulnerable PHP scripts, we should keep in mind that it is also common in other technologies such as JSP, ASP and others.
+
+Source: https://securityzines.com/ |
+Image Credits: https://twitter.com/sec_r0
+
+![image](https://user-images.githubusercontent.com/16838353/196878293-039d7eff-0334-403d-a899-7a0395948012.png)
+
+### Remote File Inclusion
+
+Remote File Inclusion (also known as RFI) is the process of including remote files through the exploiting of vulnerable inclusion procedures implemented in the application. This vulnerability occurs, for example, when a page receives, as input, the path to the file that has to be included and this input is not properly sanitized, allowing external URL to be injected. Although most examples point to vulnerable PHP scripts, we should keep in mind that it is also common in other technologies such as JSP, ASP and others.
+
+Source: https://securityzines.com/ |
+Image Credits: https://twitter.com/sec_r0
+
+![image](https://user-images.githubusercontent.com/16838353/196878480-c8796673-9fd8-4d4c-89b0-2aa67411cfa4.png)
 
 ## Forced browsing
 
