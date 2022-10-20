@@ -192,7 +192,14 @@ The SolarWinds Orion attack in which highly targeted malicious updates were dist
 
 ## Security Logging and Monitoring Failures
 
-Security logging and monitoring failures are frequently a factor in major security incidents. The BIG-IP system includes advanced logging and monitoring functionality and provides security features to protect against attacks that can result from insufficient system and application logging and monitoring. Failure to sufficiently log, monitor, or report security events, such as login attempts, makes suspicious behavior difficult to detect and significantly raises the likelihood that an attacker can successfully exploit your application. For example, an attacker may probe your application or software components for known vulnerabilities over a period. Allowing such probes to continue undetected increases the likelihood that the attacker ultimately finds a vulnerability and successfully exploits the flaw.
+Security logging and monitoring failures are frequently a factor in major security incidents. The BIG-IP system includes advanced logging and monitoring functionality and provides security features to protect against attacks that can result from insufficient system and application logging and monitoring. Failure to sufficiently log, monitor, or report security events, such as login attempts, makes suspicious behavior difficult to detect and significantly raises the likelihood that an attacker can successfully exploit your application. For example, an attacker may probe your application or software components for known vulnerabilities over a period. Allowing such probes to continue undetected increases the likelihood that the attacker ultimately finds a vulnerability and successfully exploits the flaw. Insufficient logging, monitoring, or reporting makes your application susceptible to attacks that target any part of the application stack.
+
+For example, the following attack types may result from a failure to log, monitor, or report security events:
+1) Code injection
+2) Buffer overflow
+3) Command injection
+4) Cross-site scripting (XSS)
+5) Forceful browsing
 
 ## Vulnerable and Outdated components
 
