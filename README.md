@@ -56,4 +56,3 @@ Source: https://securityzines.com/
 Image Credits: https://twitter.com/sec_r0
 
 ![idor](https://user-images.githubusercontent.com/16838353/196786238-4f9b3874-c0bf-413f-972d-eb8c688fb013.jpg)
-
