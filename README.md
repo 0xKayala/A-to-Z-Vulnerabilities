@@ -6,6 +6,10 @@
 
 - [Authentication Bypass](#Authentication-Bypass)
 - [Broken Access Control](#Broken-Access-Control)
+- [Cross-Site Scripting](#Cross-Site-Scripting)
+    - [Reflected XSS](#Reflected-XSS)
+    - [Stored XSS](#Stored-XSS)
+    - [DOM XSS](#DOM-XSS)
 - [Cross-site Request Forgery](#Cross-site-Request-Forgery)
 - [Cross-Origin Resource Sharing](#Cross-Origin-Resource-Sharing)
 - [Cryptographic Failures](#Cryptographic-Failures)
@@ -38,6 +42,22 @@ Broken access control means that an attackers can gain access to user accounts a
 Image Credits: https://www.geeksforgeeks.org/
 
 ![BAC](https://user-images.githubusercontent.com/16838353/196788103-8f86536d-cd1b-41b2-9777-2e0d88e3e4d3.png)
+
+## Cross-Site Scripting
+
+XSS is a client-side code injection where the attacker tries to inject malicious script into a trusted site. This script is in the form of JavaScript code, which can redirect a victim from their legitimate site to an attacker site without their knowledge. This weakness in an application allows an attacker to steal cookies, steal user sessions, and thereby gaining illegitimate access to the system.
+
+### Reflected XSS
+
+Reflected XSS attack occurs when a malicious script is reflected in the website’s results or response.
+
+### Stored XSS
+
+The malicious data is stored permanently on a database and is later accessed and run by the victims without knowing the attack
+
+### DOM XSS
+
+DOM Based XSS wherein the attacker’s payload is executed due to modifying the DOM “environment” in the victim’s browser used by the original client-side script. The client-side code runs in an “unexpected” manner
 
 ## Cross-site Request Forgery
 
