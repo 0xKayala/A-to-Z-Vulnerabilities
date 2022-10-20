@@ -20,6 +20,7 @@
     - [Local File Inclusion](#Local-File-Inclusion)
     - [Remote File Inclusion](#Remote-File-Inclusion)
 - [Forced browsing](#Forced-browsing)
+- [HTTP Parameter Pollution](#HTTP Parameter Pollution)
 - [HTTP Request Smuggling](#HTTP-Request-Smuggling)
 - [HTTP Headers](#HTTP-Headers)
     - [HTTP Request Header](#HTTP-Request-Header)
@@ -152,6 +153,15 @@ Image Credits: https://twitter.com/sec_r0
 ## Forced browsing
 
 A Forced browsing attack is a vulnerability in which an unauthorized user has access to the contents of an authorized user. Forced browsing is an attack when a Web application has more than one user privilege level for the same user. Thus, an attacker gets sensitive information which should otherwise not be accessible to him/her.The attacker can use a brute force approach to get common directories, files, or information of user accounts present on the website.
+
+## HTTP Parameter Pollution
+
+HTTP Parameter Pollution (HPP) is a Web attack evasion technique that allows an attacker to craft a HTTP request in order to manipulate or retrieve hidden information. This evasion technique is based on splitting an attack vector between multiple instances of a parameter with the same name. Since none of the relevant HTTP RFCs define the semantics of HTTP parameter manipulation, each web application delivery platform may deal with it differently. In particular, some environments process such requests by concatenating the values taken from all instances of a parameter name within the request. This behavior is abused by the attacker in order to bypass pattern-based security mechanisms.
+
+Source: https://securityzines.com/ |
+Image Credits: https://twitter.com/sec_r0
+
+![image](https://user-images.githubusercontent.com/16838353/196890388-0655f895-c585-4ca8-9a0c-60828aa5474b.png)
 
 ## HTTP Request Smuggling
 
