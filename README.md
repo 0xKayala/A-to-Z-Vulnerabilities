@@ -36,6 +36,7 @@
 - [Software and Data Integrity Failures](#Software-and-Data-Integrity-Failures)
 - [Security Logging and Monitoring Failures](#Security-Logging-and-Monitoring-Failures)
 - [Server-side Request Forgery](#Server-side-Request-Forgery)
+- [Server Side Template Injection](#Server-Side-Template-Injection)
 - [Vulnerable and Outdated components](#Vulnerable-and-Outdated-components)
 - [XML External Entity](#XML-External-Entity)
 
@@ -254,6 +255,16 @@ Successful SSRF attacks can result in the following:
 1) Exposure and theft of data that may include sensitive personal or corporate information
 2) Unauthorized manipulation of sensitive data
 3) Hijack of a vulnerable system to use its trust relationship with other systems to launch further attacks
+
+## Server Side Template Injection
+
+Server-side template injection is when an attacker is able to use native template syntax to inject a malicious payload into a template, which is then executed server-side.
+Template engines are designed to generate web pages by combining fixed templates with volatile data. Server-side template injection attacks can occur when user input is concatenated directly into a template, rather than passed in as data. This allows attackers to inject arbitrary template directives in order to manipulate the template engine, often enabling them to take complete control of the server. As the name suggests, server-side template injection payloads are delivered and evaluated server-side, potentially making them much more dangerous than a typical client-side template injection.
+
+Source: https://securityzines.com/ |
+Image Credits: https://twitter.com/sec_r0
+
+![image](https://user-images.githubusercontent.com/16838353/196879302-8b4ab854-9240-442f-99d9-46535ac44d1a.png)
 
 ## Vulnerable and Outdated components
 
