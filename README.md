@@ -11,6 +11,7 @@
 - [Cryptographic Failures](#Cryptographic-Failures)
 - [Directory traversal or Path Traversal](#Directory-traversal-or-Path-Traversal)
 - [Forced browsing](#Forced-browsing)
+- [Injection](#Injection)
 - [Insecure Direct Object Reference](#Insecure-Direct-Object-Reference)
 
 
@@ -57,6 +58,10 @@ Directory traversal (also known as file path traversal) is a web security vulner
 ## Forced browsing
 
 A Forced browsing attack is a vulnerability in which an unauthorized user has access to the contents of an authorized user. Forced browsing is an attack when a Web application has more than one user privilege level for the same user. Thus, an attacker gets sensitive information which should otherwise not be accessible to him/her.The attacker can use a brute force approach to get common directories, files, or information of user accounts present on the website.
+
+## Injection
+
+During an injection attack, an attacker can provide malicious input to a web application (inject it) and change the operation of the application by forcing it to execute certain commands. An injection attack can expose or damage data and lead to a denial of service or a full web server compromise. Such attacks are possible due to vulnerabilities in the code of an application that allows for unvalidated user input. Injection attacks are one of the most common and dangerous web attacks. Injection vulnerability is ranked #1 in the OWASP Top Ten Web Application Security Risks. Several injection attacks are also featured in the Common Weakness Enumeration (CWE)
 
 ## Insecure Direct Object Reference
 
