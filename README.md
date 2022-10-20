@@ -69,6 +69,9 @@ Code injection is one of the most common types of injection attacks. If attacker
 
 Sometimes web applications need to call a system command on the webserver that is running them. In such instances, if user input is not validated and restricted, a command injection can occur. Unlike code injections, command injections only require the attacker to know the operating system used. Then, the attacker inserts a command into the system, using the user privileges. The inserted command then executes in the host system. A command injection can compromise that application, its data, the entire system, connected servers, systems, and other infrastructure.
 
+![image](https://user-images.githubusercontent.com/16838353/196868738-0e6c7826-e808-47de-b0a8-cd1b5e171370.png)
+
+
 ## Directory traversal or Path Traversal
 
 Directory traversal (also known as file path traversal) is a web security vulnerability that allows an attacker to read arbitrary files on the server that is running an application. This might include application code and data, credentials for back-end systems, and sensitive operating system files. In some cases, an attacker might be able to write to arbitrary files on the server, allowing them to modify application data or behavior, and ultimately take full control of the server.
