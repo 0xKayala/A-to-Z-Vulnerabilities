@@ -17,6 +17,10 @@
 - [SQL Injection](#SQL-Injection)
     - [In-band SQLi](#In-band-SQLi)
         - [Error-based SQLi](#Error-based-SQLi)
+        - [Union-based SQLi](#Union-based-SQLi)
+    - [Blind SQLi](#Blind SQLi)
+        - [Boolean](#Boolean)
+        - [Time-based](#Time-based)
 
 
 ---
