@@ -19,6 +19,7 @@
 - [Forced browsing](#Forced-browsing)
 - [Injection](#Injection)
 - [Insecure Direct Object Reference](#Insecure-Direct-Object-Reference)
+- [Insecure Design](#Insecure-Design)
 - [SQL Injection](#SQL-Injection)
     - [In-band SQLi](#In-band-SQLi)
         - [Error-based SQLi](#Error-based-SQLi)
@@ -112,6 +113,10 @@ Source: https://securityzines.com/ |
 Image Credits: https://twitter.com/sec_r0
 
 ![idor](https://user-images.githubusercontent.com/16838353/196786238-4f9b3874-c0bf-413f-972d-eb8c688fb013.jpg)
+
+## Insecure Design
+
+Insecure design is focused on the risks associated with flaws in design and architecture. It focuses on the need for threat modeling, secure design patterns, and principles. The flaws in insecure design are not something that can be rectified by an implementation. OWASP differentiates insecure design from security implementation and controls as follows: An insecure design cannot be fixed by a perfect implementation as by definition, needed security controls were never created to defend against specific attacks. To exploit insecure design, attackers can threat model workflows in the software to reveal a broad range of vulnerabilities and weaknesses.
 
 ## SQL Injection
 
