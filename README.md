@@ -20,6 +20,7 @@
 - [Injection](#Injection)
 - [Insecure Direct Object Reference](#Insecure-Direct-Object-Reference)
 - [Insecure Design](#Insecure-Design)
+- [Identification and Authentication Failures](#Identification-and-Authentication-Failures)
 - [SQL Injection](#SQL-Injection)
     - [In-band SQLi](#In-band-SQLi)
         - [Error-based SQLi](#Error-based-SQLi)
