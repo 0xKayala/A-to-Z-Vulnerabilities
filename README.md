@@ -28,6 +28,7 @@
         - [Boolean](#Boolean)
         - [Time-based](#Time-based)
     - [Out-of-band SQLi](#Out-of-band-SQLi)
+- [Security Misconfiguration](#Security-Misconfiguration)
 
 
 ---
@@ -157,3 +158,8 @@ Attacker sends a SQL query to the database, which makes the database wait (for a
 ### Out-of-band SQLi
 
 Out-of-band SQL injection is a specific type of SQL injection where the attacker does not receive a response from the attacked application on the same communication channel but instead is able to cause the application to send data to a remote endpoint that they control. Out-of-band SQL injection is only possible if the server that you are using has commands that trigger DNS or HTTP requests.
+
+## Security Misconfiguration
+
+Security misconfigurations are security controls that are inaccurately configured or left insecure, putting your systems and data at risk. Basically, any poorly documented configuration changes, default settings, or a technical issue across any component in your endpoints could lead to a misconfiguration.
+Misconfigurations are often seen as an easy target, as it can be easy to detect on misconfigured web servers, cloud and applications and then becomes exploitable, causing significant harm and leading to catastrophic data leakage issues for enterprises like the 2019 Teletext exposure of 530,000 data files which was caused by an insecurely configured Amazon Web Service (AWS) web server. Unfortunately, once a system falls prey to a vulnerability or lack of security safeguarding, your sensitive data is at risk of getting stolen or altered.
