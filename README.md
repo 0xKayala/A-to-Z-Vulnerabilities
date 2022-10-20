@@ -58,9 +58,19 @@ XSS is a client-side code injection where the attacker tries to inject malicious
 
 Reflected XSS attack occurs when a malicious script is reflected in the website’s results or response.
 
+Source: https://securityzines.com/ |
+Image Credits: https://twitter.com/sec_r0
+
+![rxss](https://user-images.githubusercontent.com/16838353/196875177-70fe8797-2526-41f3-b457-379a3711486d.png)
+
 ### Stored XSS
 
 The malicious data is stored permanently on a database and is later accessed and run by the victims without knowing the attack
+
+Source: https://securityzines.com/ |
+Image Credits: https://twitter.com/sec_r0
+
+<img width="1743" alt="stored-xss" src="https://user-images.githubusercontent.com/16838353/196875328-0ca9bfad-faa9-4e57-9fe8-0bd54f9b89c6.png">
 
 ### DOM XSS
 
