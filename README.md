@@ -30,6 +30,7 @@
         - [Time-based](#Time-based)
     - [Out-of-band SQLi](#Out-of-band-SQLi)
 - [Security Misconfiguration](#Security-Misconfiguration)
+- [Software and Data Integrity Failures](#Software-and-Data-Integrity-Failures)
 - [Vulnerable and Outdated components](#Vulnerable-and-Outdated-components)
 
 
@@ -176,6 +177,16 @@ Out-of-band SQL injection is a specific type of SQL injection where the attacker
 
 Security misconfigurations are security controls that are inaccurately configured or left insecure, putting your systems and data at risk. Basically, any poorly documented configuration changes, default settings, or a technical issue across any component in your endpoints could lead to a misconfiguration.
 Misconfigurations are often seen as an easy target, as it can be easy to detect on misconfigured web servers, cloud and applications and then becomes exploitable, causing significant harm and leading to catastrophic data leakage issues for enterprises like the 2019 Teletext exposure of 530,000 data files which was caused by an insecurely configured Amazon Web Service (AWS) web server. Unfortunately, once a system falls prey to a vulnerability or lack of security safeguarding, your sensitive data is at risk of getting stolen or altered.
+
+## Software and Data Integrity Failures
+
+Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. This can occur when you use software from untrusted sources and repositories or even software that has been tampered with at the source, in transit, or even the endpoint cache.
+Attackers can exploit this to potentially introduce unauthorized access, malicious code, or system compromise as part of the following attacks:
+1) Cache Poisoning
+2) Code injection
+3) Command execution
+4) Denial of Service
+The SolarWinds Orion attack in which highly targeted malicious updates were distributed to more than 18,000 organizations is one of the most significant breaches of this nature.
 
 ## Vulnerable and Outdated components
 
