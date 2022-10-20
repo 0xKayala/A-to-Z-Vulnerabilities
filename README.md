@@ -34,6 +34,7 @@
 - [Security Logging and Monitoring Failures](#Security-Logging-and-Monitoring-Failures)
 - [Server-side Request Forgery](#Server-side-Request-Forgery)
 - [Vulnerable and Outdated components](#Vulnerable-and-Outdated-components)
+- [XML External Entity](#XML-External-Entity)
 
 
 ---
@@ -226,3 +227,15 @@ Successful SSRF attacks can result in the following:
 ## Vulnerable and Outdated components
 
 A software component is part of a system or application that extends the functionality of the application, such as a module, software package, or API. Component-based vulnerabilities occur when a software component is unsupported, out of date, or vulnerable to a known exploit. You may inadvertently use vulnerable software components in production environments, posing a threat to the web application. For example, an organization may download and use a software component, such as OpenSSL, and fail to regularly update or patch the component as flaws are discovered. Since many software components run with the same privileges as the application itself, any vulnerabilities or flaws in the component can result in a threat to the web application.
+
+## XML External Entity
+
+XXE (XML External Entity Injection) is a common web-based security vulnerability that enables an attacker to interfere with the processing of XML data within a web application.  
+While XML is an extremely popular format used by developers to transfer data between the web browser and the server, this results in XXE being a common security flaw.
+XML requires a parser, which is typically where vulnerabilities occur. XXE enables an entity to be defined based on the content of a file path or URL. When the XML attack payload is read by the server, the external entity is parsed, merged into the final document, and returns it to the user with the sensitive data inside. 
+XXE attacks can result in port scanning within the internal network, server-side request forgery (SSRF), data exfiltration, use of an organization’s servers to perform denial of service (DoS), and more.
+
+Source: https://securityzines.com/ |
+Image Credits: https://twitter.com/sec_r0
+
+![image](https://user-images.githubusercontent.com/16838353/196876341-7f06aaaf-4ff5-4bc5-922b-ead822d6ccbf.png)
