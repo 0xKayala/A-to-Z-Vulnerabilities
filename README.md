@@ -5,11 +5,11 @@
 ## Contents
 
 - [Broken Access Control](#Broken-Access-Control)
-- [Insecure Direct Object Reference](#Insecure-Direct-Object-Reference)
 - [Cross-site Request Forgery](#Cross-site-Request-Forgery)
 - [Cross-Origin Resource Sharing](#Cross-Origin-Resource-Sharing)
 - [Directory traversal or Path Traversal](#Directory-traversal-or-Path-Traversal)
 - [Forced browsing](#Forced-browsing)
+- [Insecure Direct Object Reference](#Insecure-Direct-Object-Reference)
 
 
 ---
@@ -21,15 +21,6 @@ Broken access control means that an attackers can gain access to user accounts a
 Image Credits: https://www.geeksforgeeks.org/
 
 ![BAC](https://user-images.githubusercontent.com/16838353/196788103-8f86536d-cd1b-41b2-9777-2e0d88e3e4d3.png)
-
-## Insecure Direct Object Reference
-
-Insecure Direct Object Reference (IDOR) - This vulnerability happens when the application doesn’t properly validate access to resources through IDs. For example, an application shows a purchase order to the customer using the /orders/1234 endpoint. However, the user whose order id is 1234 can also access other orders by simply changing the order id. This is the simplest scenario, but there are many other techniques to exploit an IDOR vulnerability
-
-Source: https://securityzines.com/
-Image Credits: https://twitter.com/sec_r0
-
-![idor](https://user-images.githubusercontent.com/16838353/196786238-4f9b3874-c0bf-413f-972d-eb8c688fb013.jpg)
 
 ## Cross-site Request Forgery
 
@@ -56,3 +47,13 @@ Directory traversal (also known as file path traversal) is a web security vulner
 ## Forced browsing
 
 A Forced browsing attack is a vulnerability in which an unauthorized user has access to the contents of an authorized user. Forced browsing is an attack when a Web application has more than one user privilege level for the same user. Thus, an attacker gets sensitive information which should otherwise not be accessible to him/her.The attacker can use a brute force approach to get common directories, files, or information of user accounts present on the website.
+
+## Insecure Direct Object Reference
+
+Insecure Direct Object Reference (IDOR) - This vulnerability happens when the application doesn’t properly validate access to resources through IDs. For example, an application shows a purchase order to the customer using the /orders/1234 endpoint. However, the user whose order id is 1234 can also access other orders by simply changing the order id. This is the simplest scenario, but there are many other techniques to exploit an IDOR vulnerability
+
+Source: https://securityzines.com/
+Image Credits: https://twitter.com/sec_r0
+
+![idor](https://user-images.githubusercontent.com/16838353/196786238-4f9b3874-c0bf-413f-972d-eb8c688fb013.jpg)
+
