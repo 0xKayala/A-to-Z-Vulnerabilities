@@ -9,6 +9,7 @@
 - [Cross-site Request Forgery](#Cross-site-Request-Forgery)
 - [Cross-Origin Resource Sharing](#Cross-Origin-Resource-Sharing)
 - [Cryptographic Failures](#Cryptographic-Failures)
+- [Code Injection](#Code-Injection)
 - [Directory traversal or Path Traversal](#Directory-traversal-or-Path-Traversal)
 - [Forced browsing](#Forced-browsing)
 - [Injection](#Injection)
@@ -50,6 +51,10 @@ Image Credits: https://twitter.com/sec_r0
 ## Cryptographic Failures
 
 A cryptographic failure is a critical web application security vulnerability that exposes sensitive application data on a weak or non-existent cryptographic algorithm. These can be passwords, patient health records, business secrets, credit card information, email addresses, or other personal user information. Apart from exposing sensitive information, as cryptographic failures can also compromise systems, the implications of this vulnerability are considered one of the most critical security risks for both organizations and business users
+
+## Code Injection
+
+Code injection is one of the most common types of injection attacks. If attackers know the programming language, the framework, the database or the operating system used by a web application, they can inject code via text input fields to force the webserver to do what they want. These types of injection attacks are possible on applications that lack input data validation. If a text input field lets users enter whatever they want, then the application is potentially exploitable. To prevent these attacks, the application needs to restrict as much as it can the input users are allowed to enter. For example, it needs to limit the amount of expected data, to check the data format before accepting it, and to restrict the set of allowed characters.
 
 ## Directory traversal or Path Traversal
 
