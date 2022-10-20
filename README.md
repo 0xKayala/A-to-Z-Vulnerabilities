@@ -82,3 +82,15 @@ Image Credits: https://twitter.com/sec_r0
 
 In a similar way to code injection, this attack inserts an SQL script –the language used by most databases to perform query operations– in a text input field.
 The script is sent to the application, which executes it directly on its database. As a result, the attacker could pass through a login screen or do more dangerous things, like read sensitive data directly from the database, modify or destroy database data, or execute admin operations on the database. PHP and ASP applications are prone to SQL injection attacks due to its older functional interfaces. J2EE and ASP.Net apps are usually more protected against these attacks. When an SQL injection vulnerability is found –and they could be easily found–the magnitude of the potential attacks will only be limited by the attacker’s skill and imagination. Thus, the impact of an SQL injection attack is undoubtedly high.
+
+### In-band SQLi
+
+The attacker uses the same channel of communication to launch their attacks and to gather their results. In-band SQLi’s simplicity and efficiency make it one of the most common types of SQLi attack. There are two sub-variations of this method:
+
+#### Error-based SQLi
+
+Attacker tries to insert malicious query in input fields and get some error which is regarding SQL syntax or database. The error message gives information about the database used, where the syntax error occurred in the query. Error based technique is the easiest way to find SQL Injection
+
+#### Union-based SQLi
+
+Union based SQL injection allows an attacker to extract information from the database by extending the results returned by the original query. The Union operator can only be used if the original/new queries have the same structure (number and data type of columns)
