@@ -21,6 +21,7 @@
     - [Blind SQLi](#Blind-SQLi)
         - [Boolean](#Boolean)
         - [Time-based](#Time-based)
+    - [Out-of-band SQLi](#Out-of-band-SQLi)
 
 
 ---
@@ -113,3 +114,7 @@ Attacker sends a SQL query to the database prompting the application to return a
 #### Time-based
 
 Attacker sends a SQL query to the database, which makes the database wait (for a period in seconds) before it can react. The attacker can see from the time the database takes to respond, whether a query is true or false. Based on the result, an HTTP response will be generated instantly or after a waiting period. The attacker can thus work out if the message they used returned true or false, without relying on data from the database.
+
+### Out-of-band SQLi
+
+Out-of-band SQL injection is a specific type of SQL injection where the attacker does not receive a response from the attacked application on the same communication channel but instead is able to cause the application to send data to a remote endpoint that they control. Out-of-band SQL injection is only possible if the server that you are using has commands that trigger DNS or HTTP requests.
