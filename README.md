@@ -32,6 +32,7 @@
 - [Security Misconfiguration](#Security-Misconfiguration)
 - [Software and Data Integrity Failures](#Software-and-Data-Integrity-Failures)
 - [Security Logging and Monitoring Failures](#Security-Logging-and-Monitoring-Failures)
+- [Server-side Request Forgery](#Server-side-Request-Forgery)
 - [Vulnerable and Outdated components](#Vulnerable-and-Outdated-components)
 
 
@@ -200,6 +201,17 @@ For example, the following attack types may result from a failure to log, monito
 3) Command injection
 4) Cross-site scripting (XSS)
 5) Forceful browsing
+
+## Server-side Request Forgery
+
+Server-side request forgery (SSRF) flaws occur whenever a web application is fetching a remote resource without validating the user-supplied URL.
+The vulnerable web application will often have privileges to read, write, or import data using a URL. To execute an SSRF attack, the attacker abuses the functionality on the server to read or update internal resources.
+The attacker can then force the application to send requests to access unintended resources, often bypassing security controls.
+
+Successful SSRF attacks can result in the following:
+1) Exposure and theft of data that may include sensitive personal or corporate information
+2) Unauthorized manipulation of sensitive data
+3) Hijack of a vulnerable system to use its trust relationship with other systems to launch further attacks
 
 ## Vulnerable and Outdated components
 
