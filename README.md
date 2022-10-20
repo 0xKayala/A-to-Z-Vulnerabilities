@@ -127,6 +127,17 @@ Example:
 4) The victim's browser accesses the API through the application.
 5) The browser loads content with the malicious script.
 
+## Identification and Authentication Failures
+
+Identification and authentication failures can occur when functions related to a user's identity, authentication, or session management are not implemented correctly or not adequately protected by an application. Attackers may be able to exploit identification and authentication failures by compromising passwords, keys, session tokens, or exploit other implementation flaws to assume other users' identities, either temporarily or permanently.
+Attackers use a range of techniques to exploit broken authentication such as:
+1) Brute force/credential stuffing
+2) Session hijacking
+3) Session fixation
+4) Cross Site Request Forgery (CSRF)
+5) Execution After Redirect (EAR)
+6) One-click attack
+
 ## SQL Injection
 
 In a similar way to code injection, this attack inserts an SQL script –the language used by most databases to perform query operations– in a text input field.
