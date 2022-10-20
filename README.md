@@ -52,6 +52,10 @@
 
 An attacker gains access to application, service, or device with the privileges of an authorized or privileged user by evading or circumventing an authentication mechanism. The attacker is therefore able to access protected data without authentication ever having taken place. This refers to an attacker gaining access equivalent to an authenticated user without ever going through an authentication procedure. This is usually the result of the attacker using an unexpected access procedure that does not go through the proper checkpoints where authentication should occur. For example, a web site might assume that all users will click through a given link in order to get to secure material and simply authenticate everyone that clicks the link. However, an attacker might be able to reach secured web content by explicitly entering the path to the content rather than clicking through the authentication link, thereby avoiding the check entirely. This attack pattern differs from other authentication attacks in that attacks of this pattern avoid authentication entirely, rather than faking authentication by exploiting flaws or by stealing credentials from legitimate users.
 
+Image Credits: https://www.bugcrowd.com/blog/authentication-bypass/
+
+![image](https://user-images.githubusercontent.com/16838353/196902854-dece27e7-5d44-40ca-9bb7-36441d8f8932.png)
+
 ## Broken Access Control
 
 Broken access control means that an attackers can gain access to user accounts and act as users or administrators by which he can gain unintended privileged functions. In Simple terms, broken access control happens when the application allows a user to perform unauthorized actions. There are many vulnerabilities which contribute to this risk, For instance, if the developer forgets to validate permissions when dealing with identifiers, the application becomes vulnerable to Insecure Direct Object Reference (IDOR). Other vulnerabilities include Cross-site Request Forgery (CSRF), Cross-Origin Resource Sharing (CORS) misconfigurations, directory traversal and forced browsing
@@ -63,6 +67,11 @@ Image Credits: https://www.geeksforgeeks.org/
 ## Cross-Site Scripting
 
 XSS is a client-side code injection where the attacker tries to inject malicious script into a trusted site. This script is in the form of JavaScript code, which can redirect a victim from their legitimate site to an attacker site without their knowledge. This weakness in an application allows an attacker to steal cookies, steal user sessions, and thereby gaining illegitimate access to the system.
+
+Source: https://securityzines.com/ |
+Image Credits: https://twitter.com/sec_r0
+
+![image](https://user-images.githubusercontent.com/16838353/196904106-1633ecc9-3076-464b-aabd-ad6d6400c90b.png)
 
 ### Reflected XSS
 
@@ -85,6 +94,10 @@ Image Credits: https://twitter.com/sec_r0
 ### DOM XSS
 
 DOM Based XSS wherein the attacker’s payload is executed due to modifying the DOM “environment” in the victim’s browser used by the original client-side script. The client-side code runs in an “unexpected” manner
+
+Image Credits: https://medium.com/iocscan/dom-based-cross-site-scripting-dom-xss-3396453364fd
+
+![image](https://user-images.githubusercontent.com/16838353/196901948-7cb86a34-7536-423e-862f-df7c94a39cb6.png)
 
 ## Cross-site Request Forgery
 
