@@ -20,6 +20,7 @@
     - [Local File Inclusion](#Local-File-Inclusion)
     - [Remote File Inclusion](#Remote-File-Inclusion)
 - [Forced browsing](#Forced-browsing)
+- [HTTP Request Smuggling](#HTTP-Request-Smuggling)
 - [HTTP Headers](#HTTP-Headers)
     - [HTTP Request Header](#HTTP-Request-Header)
     - [HTTP Response Header](#HTTP-Response-Header)
@@ -151,6 +152,17 @@ Image Credits: https://twitter.com/sec_r0
 ## Forced browsing
 
 A Forced browsing attack is a vulnerability in which an unauthorized user has access to the contents of an authorized user. Forced browsing is an attack when a Web application has more than one user privilege level for the same user. Thus, an attacker gets sensitive information which should otherwise not be accessible to him/her.The attacker can use a brute force approach to get common directories, files, or information of user accounts present on the website.
+
+## HTTP Request Smuggling
+
+HTTP request smuggling exploits the inconsistency in parsing non-RFC-compliant HTTP requests via two HTTP devices (generally a backend server and HTTP-enabled firewall or a front-end proxy). The HTTP request smuggling process is carried out by creating multiple, customized HTTP requests that make two target entities see two distinct series of requests.
+The HTTP header offers two distinct ways of specifying where the request ends: the Transfer-Encoding header and the Content-Length header. An HTTP request smuggling vulnerability occurs when an attacker sends both headers in a single request. This can cause either the front-end or the back-end server to incorrectly interpret the request, passing through a malicious HTTP query.
+Request smuggling vulnerabilities let cybercriminals side-step security measures, attain access to sensitive information, and directly compromise various application users. It can also be used for secondary exploits, including bypassing firewalls, partial cache poisoning, and cross-site scripting (XSS).
+
+Source: https://securityzines.com/ |
+Image Credits: https://twitter.com/sec_r0
+
+![image](https://user-images.githubusercontent.com/16838353/196884498-54299b49-eb10-43bc-a4c2-5bdff4ae5bd5.png)
 
 ## HTTP Headers
 
