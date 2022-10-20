@@ -20,7 +20,9 @@
     - [Local File Inclusion](#Local-File-Inclusion)
     - [Remote File Inclusion](#Remote-File-Inclusion)
 - [Forced browsing](#Forced-browsing)
-- [HTTP Request Header](#HTTP-Request-Header)
+- [HTTP Headers](#HTTP-Headers)
+    - [HTTP Request Header](#HTTP-Request-Header)
+    - [HTTP Response Header](#HTTP-Response-Header)
 - [Injection](#Injection)
 - [Insecure Direct Object Reference](#Insecure-Direct-Object-Reference)
 - [Insecure Design](#Insecure-Design)
@@ -150,14 +152,27 @@ Image Credits: https://twitter.com/sec_r0
 
 A Forced browsing attack is a vulnerability in which an unauthorized user has access to the contents of an authorized user. Forced browsing is an attack when a Web application has more than one user privilege level for the same user. Thus, an attacker gets sensitive information which should otherwise not be accessible to him/her.The attacker can use a brute force approach to get common directories, files, or information of user accounts present on the website.
 
-## HTTP Request Header
+## HTTP Headers
 
-The HTTP headers are used to pass additional information between the clients and the server through the request and response header. All the headers are case-insensitive, headers fields are separated by colon, key-value pairs in clear-text string format. HTTP Request Header contains information about the fetched request by the client.
+The HTTP headers are used to pass additional information between the clients and the server through the request and response header. All the headers are case-insensitive, headers fields are separated by colon, key-value pairs in clear-text string format. The end of the header section denoted by an empty field header. There are a few header fields that can contain the comments. And a few headers can contain quality(q) key-value pairs that separated by an equal sign.
+
+### HTTP Request Header
+
+This type of headers contains information about the fetched request by the client.
 
 Source: https://securityzines.com/ |
 Image Credits: https://twitter.com/sec_r0
 
 ![image](https://user-images.githubusercontent.com/16838353/196882019-32e30ad1-a3cc-4813-ba02-314503c5bb4b.png)
+
+### HTTP Response Header
+
+This type of headers contains the location of the source that has been requested by the client.
+
+Source: https://securityzines.com/ |
+Image Credits: https://twitter.com/sec_r0
+
+![image](https://user-images.githubusercontent.com/16838353/196883328-5047f9dd-3fcc-48f8-aff7-dad27e20ec86.png)
 
 ## Injection
 
