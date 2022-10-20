@@ -117,6 +117,12 @@ Image Credits: https://twitter.com/sec_r0
 ## Insecure Design
 
 Insecure design is focused on the risks associated with flaws in design and architecture. It focuses on the need for threat modeling, secure design patterns, and principles. The flaws in insecure design are not something that can be rectified by an implementation. OWASP differentiates insecure design from security implementation and controls as follows: An insecure design cannot be fixed by a perfect implementation as by definition, needed security controls were never created to defend against specific attacks. To exploit insecure design, attackers can threat model workflows in the software to reveal a broad range of vulnerabilities and weaknesses.
+Example:
+1) Attacker exploits a poorly designed API that does not properly filter input.
+2) The attacker scans for vulnerable APIs and identifies an API that does not properly filter input and does not use the organizations API security gateway.
+3) The attacker injects a malicious script into the vulnerable API.
+4) The victim's browser accesses the API through the application.
+5) The browser loads content with the malicious script.
 
 ## SQL Injection
 
