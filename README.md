@@ -10,6 +10,7 @@
 - [Cross-Origin Resource Sharing](#Cross-Origin-Resource-Sharing)
 - [Cryptographic Failures](#Cryptographic-Failures)
 - [Code Injection](#Code-Injection)
+- [Command injection](#Command-injection)
 - [Directory traversal or Path Traversal](#Directory-traversal-or-Path-Traversal)
 - [Forced browsing](#Forced-browsing)
 - [Injection](#Injection)
@@ -63,6 +64,10 @@ A cryptographic failure is a critical web application security vulnerability tha
 ## Code Injection
 
 Code injection is one of the most common types of injection attacks. If attackers know the programming language, the framework, the database or the operating system used by a web application, they can inject code via text input fields to force the webserver to do what they want. These types of injection attacks are possible on applications that lack input data validation. If a text input field lets users enter whatever they want, then the application is potentially exploitable. To prevent these attacks, the application needs to restrict as much as it can the input users are allowed to enter. For example, it needs to limit the amount of expected data, to check the data format before accepting it, and to restrict the set of allowed characters.
+
+## Command injection
+
+Sometimes web applications need to call a system command on the webserver that is running them. In such instances, if user input is not validated and restricted, a command injection can occur. Unlike code injections, command injections only require the attacker to know the operating system used. Then, the attacker inserts a command into the system, using the user privileges. The inserted command then executes in the host system. A command injection can compromise that application, its data, the entire system, connected servers, systems, and other infrastructure.
 
 ## Directory traversal or Path Traversal
 
