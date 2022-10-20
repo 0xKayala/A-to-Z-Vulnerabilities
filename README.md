@@ -14,6 +14,7 @@
 - [Forced browsing](#Forced-browsing)
 - [Injection](#Injection)
 - [Insecure Direct Object Reference](#Insecure-Direct-Object-Reference)
+- [SQL Injection](#SQL-Injection)
 
 
 ---
@@ -76,3 +77,8 @@ Source: https://securityzines.com/ |
 Image Credits: https://twitter.com/sec_r0
 
 ![idor](https://user-images.githubusercontent.com/16838353/196786238-4f9b3874-c0bf-413f-972d-eb8c688fb013.jpg)
+
+## SQL Injection
+
+In a similar way to code injection, this attack inserts an SQL script –the language used by most databases to perform query operations– in a text input field.
+The script is sent to the application, which executes it directly on its database. As a result, the attacker could pass through a login screen or do more dangerous things, like read sensitive data directly from the database, modify or destroy database data, or execute admin operations on the database. PHP and ASP applications are prone to SQL injection attacks due to its older functional interfaces. J2EE and ASP.Net apps are usually more protected against these attacks. When an SQL injection vulnerability is found –and they could be easily found–the magnitude of the potential attacks will only be limited by the attacker’s skill and imagination. Thus, the impact of an SQL injection attack is undoubtedly high.
