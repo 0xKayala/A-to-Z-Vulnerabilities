@@ -20,6 +20,7 @@
     - [Local File Inclusion](#Local-File-Inclusion)
     - [Remote File Inclusion](#Remote-File-Inclusion)
 - [Forced browsing](#Forced-browsing)
+- [HTTP Request Header](#HTTP-Request-Header)
 - [Injection](#Injection)
 - [Insecure Direct Object Reference](#Insecure-Direct-Object-Reference)
 - [Insecure Design](#Insecure-Design)
@@ -113,7 +114,6 @@ Sometimes web applications need to call a system command on the webserver that i
 
 ![image](https://user-images.githubusercontent.com/16838353/196868738-0e6c7826-e808-47de-b0a8-cd1b5e171370.png)
 
-
 ## Directory traversal or Path Traversal
 
 Directory traversal (also known as file path traversal) is a web security vulnerability that allows an attacker to read arbitrary files on the server that is running an application. This might include application code and data, credentials for back-end systems, and sensitive operating system files. In some cases, an attacker might be able to write to arbitrary files on the server, allowing them to modify application data or behavior, and ultimately take full control of the server.
@@ -149,6 +149,15 @@ Image Credits: https://twitter.com/sec_r0
 ## Forced browsing
 
 A Forced browsing attack is a vulnerability in which an unauthorized user has access to the contents of an authorized user. Forced browsing is an attack when a Web application has more than one user privilege level for the same user. Thus, an attacker gets sensitive information which should otherwise not be accessible to him/her.The attacker can use a brute force approach to get common directories, files, or information of user accounts present on the website.
+
+## HTTP Request Header
+
+The HTTP headers are used to pass additional information between the clients and the server through the request and response header. All the headers are case-insensitive, headers fields are separated by colon, key-value pairs in clear-text string format. HTTP Request Header contains information about the fetched request by the client.
+
+Source: https://securityzines.com/ |
+Image Credits: https://twitter.com/sec_r0
+
+![image](https://user-images.githubusercontent.com/16838353/196882019-32e30ad1-a3cc-4813-ba02-314503c5bb4b.png)
 
 ## Injection
 
