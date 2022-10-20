@@ -248,6 +248,11 @@ Attackers use a range of techniques to exploit broken authentication such as:
 In a similar way to code injection, this attack inserts an SQL script –the language used by most databases to perform query operations– in a text input field.
 The script is sent to the application, which executes it directly on its database. As a result, the attacker could pass through a login screen or do more dangerous things, like read sensitive data directly from the database, modify or destroy database data, or execute admin operations on the database. PHP and ASP applications are prone to SQL injection attacks due to its older functional interfaces. J2EE and ASP.Net apps are usually more protected against these attacks. When an SQL injection vulnerability is found –and they could be easily found–the magnitude of the potential attacks will only be limited by the attacker’s skill and imagination. Thus, the impact of an SQL injection attack is undoubtedly high.
 
+Source: https://securityzines.com/ |
+Image Credits: https://twitter.com/sec_r0
+
+![image](https://user-images.githubusercontent.com/16838353/196904420-c6da73f9-d2f4-4b55-abac-bfbaa683878e.png)
+
 ### In-band SQLi
 
 The attacker uses the same channel of communication to launch their attacks and to gather their results. In-band SQLi’s simplicity and efficiency make it one of the most common types of SQLi attack. There are two sub-variations of this method:
