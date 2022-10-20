@@ -20,7 +20,7 @@
     - [Local File Inclusion](#Local-File-Inclusion)
     - [Remote File Inclusion](#Remote-File-Inclusion)
 - [Forced browsing](#Forced-browsing)
-- [HTTP Parameter Pollution](#HTTP Parameter Pollution)
+- [HTTP Parameter Pollution](#HTTP-Parameter-Pollution)
 - [HTTP Request Smuggling](#HTTP-Request-Smuggling)
 - [HTTP Headers](#HTTP-Headers)
     - [HTTP Request Header](#HTTP-Request-Header)
