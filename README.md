@@ -351,3 +351,12 @@ Source: https://securityzines.com/ |
 Image Credits: https://twitter.com/sec_r0
 
 ![image](https://user-images.githubusercontent.com/16838353/196876341-7f06aaaf-4ff5-4bc5-922b-ead822d6ccbf.png)
+
+## Contributing 
+- To Contribute in this Repo Send me direct message to My Twitter : [0xKayala](https://twitter.com/0xKayala)
+
+## Maintainers 
+
+`This Repo is maintained by : `
+
+- [Satya Prakash](https://github.com/0xKayala)
