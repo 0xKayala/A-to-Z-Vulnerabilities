@@ -65,10 +65,10 @@ Image Credits: https://www.bugcrowd.com/blog/authentication-bypass/
 
 ## Broken Access Control
 
-Broken acess control is flaw in web application which is occur due to ` poor implementation of access control mechanism that can be easily exploited. This flaw allow attacker/unauthorised user to access the contents that they are not allowed to view, can perform unauthorised functions, even an attacker can delete the content, or take over site administration. There are many vulnerabilities which contribute to this risk, For instance, if the developer forgets to validate permissions when dealing with identifiers, the application becomes vulnerable to Insecure Direct Object Reference (IDOR). Other vulnerabilities include Cross-site Request Forgery (CSRF), Cross-Origin Resource Sharing (CORS) misconfigurations, directory traversal and forced browsing
+Broken acess control is flaw in web application which is occur due to "poor implementation" of access control mechanism that can be easily exploited. This flaw allow attacker/unauthorised user to access the contents that they are not allowed to view, can perform unauthorised functions, even an attacker can delete the content, or take over site administration. There are many vulnerabilities which contribute to this risk, For instance, if the developer forgets to validate permissions when dealing with identifiers, the application becomes vulnerable to Insecure Direct Object Reference (IDOR). Other vulnerabilities include Cross-site Request Forgery (CSRF), Cross-Origin Resource Sharing (CORS) misconfigurations, directory traversal and forced browsing
 
 Mitigation:
-1) Proper implementations of access control to the `users.
+1) Proper implementations of access control to the users.
 2) Delete any inactive or unnecessary accounts.
 3) Shutdown unnecessary service and access point.
 4) Use multi-factor authentication at all access points
