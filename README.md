@@ -53,7 +53,7 @@
 
 An attacker gains access to application, service, or device with the privileges of an authorized or privileged user by evading or circumventing an authentication mechanism. The attacker is therefore able to access protected data without authentication ever having taken place. This refers to an attacker gaining access equivalent to an authenticated user without ever going through an authentication procedure. This is usually the result of the attacker using an unexpected access procedure that does not go through the proper checkpoints where authentication should occur. For example, a web site might assume that all users will click through a given link in order to get to secure material and simply authenticate everyone that clicks the link. However, an attacker might be able to reach secured web content by explicitly entering the path to the content rather than clicking through the authentication link, thereby avoiding the check entirely. This attack pattern differs from other authentication attacks in that attacks of this pattern avoid authentication entirely, rather than faking authentication by exploiting flaws or by stealing credentials from legitimate users.
 
-Mitigations:
+Mitigation:
 1) Do not rely on client side only make the checks at the server side.
 2) Verifying the client side and taking decisions is very very dangerous.
 3) Use authentication based on strong tokens such as json web token mechanism.
@@ -65,7 +65,14 @@ Image Credits: https://www.bugcrowd.com/blog/authentication-bypass/
 
 ## Broken Access Control
 
-Broken access control means that an attackers can gain access to user accounts and act as users or administrators by which he can gain unintended privileged functions. In Simple terms, broken access control happens when the application allows a user to perform unauthorized actions. There are many vulnerabilities which contribute to this risk, For instance, if the developer forgets to validate permissions when dealing with identifiers, the application becomes vulnerable to Insecure Direct Object Reference (IDOR). Other vulnerabilities include Cross-site Request Forgery (CSRF), Cross-Origin Resource Sharing (CORS) misconfigurations, directory traversal and forced browsing
+Broken acess control is flaw in web application which is occur due to ` poor implementation of access control mechanism that can be easily exploited. This flaw allow attacker/unauthorised user to access the contents that they are not allowed to view, can perform unauthorised functions, even an attacker can delete the content, or take over site administration. There are many vulnerabilities which contribute to this risk, For instance, if the developer forgets to validate permissions when dealing with identifiers, the application becomes vulnerable to Insecure Direct Object Reference (IDOR). Other vulnerabilities include Cross-site Request Forgery (CSRF), Cross-Origin Resource Sharing (CORS) misconfigurations, directory traversal and forced browsing
+
+Mitigation:
+1) Proper implementations of access control to the `users.
+2) Delete any inactive or unnecessary accounts.
+3) Shutdown unnecessary service and access point.
+4) Use multi-factor authentication at all access points
+5) Disable web server directory listing
 
 Image Credits: https://www.geeksforgeeks.org/
 
