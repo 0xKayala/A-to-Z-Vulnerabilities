@@ -6,6 +6,7 @@
 
 - [Authentication Bypass](#Authentication-Bypass)
 - [Broken Access Control](#Broken-Access-Control)
+- [Business Logic Flaw](#Business-Logic-Flaw)
 - [Cross-Site Scripting](#Cross-Site-Scripting)
     - [Reflected XSS](#Reflected-XSS)
     - [Stored XSS](#Stored-XSS)
@@ -69,6 +70,11 @@ Broken access control means that an attackers can gain access to user accounts a
 Image Credits: https://www.geeksforgeeks.org/
 
 ![BAC](https://user-images.githubusercontent.com/16838353/196788103-8f86536d-cd1b-41b2-9777-2e0d88e3e4d3.png)
+
+## Business Logic Flaw
+
+Business logic vulnerabilities are flaws in the design and implementation of an application that allow an attacker to elicit unintended behavior.
+This potentially enables attackers to manipulate legitimate functionality to achieve a malicious goal.
 
 ## Cross-Site Scripting
 
