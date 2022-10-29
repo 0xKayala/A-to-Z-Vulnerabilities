@@ -148,6 +148,9 @@ Code injection is one of the most common types of injection attacks. If attacker
 
 Sometimes web applications need to call a system command on the webserver that is running them. In such instances, if user input is not validated and restricted, a command injection can occur. Unlike code injections, command injections only require the attacker to know the operating system used. Then, the attacker inserts a command into the system, using the user privileges. The inserted command then executes in the host system. A command injection can compromise that application, its data, the entire system, connected servers, systems, and other infrastructure.
 
+#### Tools:
+- [commix](https://github.com/commixproject/commix) - Automated All-in-One OS command injection and exploitation tool.
+
 ![image](https://user-images.githubusercontent.com/16838353/196868738-0e6c7826-e808-47de-b0a8-cd1b5e171370.png)
 
 ## Directory traversal or Path Traversal
