@@ -151,7 +151,10 @@ Sometimes web applications need to call a system command on the webserver that i
 #### Tools:
 - [commix](https://github.com/commixproject/commix) - Automated All-in-One OS command injection and exploitation tool.
 
-![image](https://user-images.githubusercontent.com/16838353/196868738-0e6c7826-e808-47de-b0a8-cd1b5e171370.png)
+Source: https://security-flashcards.com |
+Image Credits: https://twitter.com/secflashcards
+
+![image](https://user-images.githubusercontent.com/16838353/200125875-01abbfd4-626f-46aa-988e-47ee7cf467dd.png)
 
 ## Directory traversal or Path Traversal
 
