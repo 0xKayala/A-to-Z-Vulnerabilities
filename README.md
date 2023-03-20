@@ -270,8 +270,14 @@ Attackers use a range of techniques to exploit broken authentication such as:
 
 ## SQL Injection
 
-In a similar way to code injection, this attack inserts an SQL script –the language used by most databases to perform query operations– in a text input field.
-The script is sent to the application, which executes it directly on its database. As a result, the attacker could pass through a login screen or do more dangerous things, like read sensitive data directly from the database, modify or destroy database data, or execute admin operations on the database. PHP and ASP applications are prone to SQL injection attacks due to its older functional interfaces. J2EE and ASP.Net apps are usually more protected against these attacks. When an SQL injection vulnerability is found –and they could be easily found–the magnitude of the potential attacks will only be limited by the attacker’s skill and imagination. Thus, the impact of an SQL injection attack is undoubtedly high.
+SQL injection is a type of attack where an attacker can execute malicious SQL code by inserting them into an entry field on a website or application that interacts with a database. The attacker can exploit vulnerabilities in the code of the website or application to bypass security measures and gain unauthorized access to the database. Once the attacker has gained access to the database, they can extract sensitive information such as usernames, passwords, and credit card details, or modify or delete data stored in the database.
+
+Mitigation:
+1) Use parameterized queries: This involves using prepared statements or parameterized queries, which separate the SQL code from the user input. This prevents the attacker from injecting SQL code directly into the query.
+2) Validate user input: Ensure that user input is validated before it is used in a SQL query. This includes validating the data type, length, and format of the input.
+3) Limit user privileges: Use the principle of least privilege to restrict the privileges of users who have access to the database. This reduces the potential damage that can be caused by a successful SQL injection attack.
+4) Implement firewalls and access controls: Use firewalls and access controls to restrict the access to the database to only authorized users. This reduces the likelihood of an attacker gaining access to the database and being able to carry out a successful SQL injection attack.
+
 
 Source: https://securityzines.com/ |
 Image Credits: https://twitter.com/sec_r0
