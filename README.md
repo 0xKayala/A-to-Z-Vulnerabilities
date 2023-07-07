@@ -30,6 +30,7 @@
 - [Insecure Direct Object Reference](#Insecure-Direct-Object-Reference)
 - [Insecure Design](#Insecure-Design)
 - [Identification and Authentication Failures](#Identification-and-Authentication-Failures)
+- [Security Response Headers Missing](#security-response-headers-missing)
 - [SQL Injection](#SQL-Injection)
     - [In-band SQLi](#In-band-SQLi)
         - [Error-based SQLi](#Error-based-SQLi)
@@ -267,6 +268,14 @@ Attackers use a range of techniques to exploit broken authentication such as:
 4) Cross Site Request Forgery (CSRF)
 5) Execution After Redirect (EAR)
 6) One-click attack
+
+## Security Response Headers Missing
+
+Script to check for missing security response headers:
+
+var req=new XMLHttpRequest;req.open("GET",document.location,!1),req.send(null);var headers=req.getAllResponseHeaders().toLowerCase(),data=["X-Content-Type-Options","Referrer-Policy","Content-Security-Policy","Strict-Transport-Security","X-Frame-Options","Permissions-Policy","x-xss-protection"];for(console.log("\n\n"),console.log("---------------------Missing Header----------------------"),i=0;i<=6;i++)headers.search(data[i].toLowerCase())<0&&console.log(data[i]);console.log("---------------------------------------------------------\n"),console.log("\n\n");
+
+Paste the above code in the website's console under developer tab
 
 ## SQL Injection
 
