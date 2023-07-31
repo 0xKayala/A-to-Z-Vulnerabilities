@@ -33,6 +33,7 @@
 - [Identification and Authentication Failures](#Identification-and-Authentication-Failures)
 - [LDAP Anonymous Login](#LDAP-Anonymous-Login)
 - [Nmap Vulnerability Scanner](#Nmap-Vulnerability-Scanner)
+- [Remote Code Execution on SMB 3.1.1](#Remote-Code-Execution-on-SMB-3.1.1)
 - [Security Response Headers Missing](#security-response-headers-missing)
 - [SMB Work Group Enumeration with Anonymous login](#SMB-Work-Group-Enumeration-with-Anonymous-login)
 - [SQL Injection](#SQL-Injection)
@@ -323,6 +324,15 @@ Nmap vulnerability scan: `sudo nmap -Pn --script vuln -sV host`
 Nmap full port scan: `nmap -Pn -sC -sV -T4 -A -O -p- IP`
 
 SSL enumeration: `nmap -Pn -sV --script ssl-enum-ciphers -p 443 <host>`
+
+## Remote Code Execution on SMB 3.1.1
+
+Microsoft Server Message Block 3.1. 1 (SMBv3) protocol is capable of detecting interception attacks that attempt to downgrade the protocol or the capabilities that the client and server negotiate by use of pre-authentication integrity.
+
+Remote code execution (RCE) attacks allow an attacker to remotely execute malicious code on a computer. The RCE vulnerability can range from malware execution to an attacker gaining full control over a compromised machine.
+
+To exploit the vulnerability against a client, an unauthenticated attacker would need to configure a malicious SMBv3 server and convince a user to connect to it.
+After successful exploitation could allow attackers to use shares to cause the system to crash.
 
 
 ## Security Response Headers Missing
