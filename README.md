@@ -350,7 +350,7 @@ Description of SMB Workgroup Enumeration with Anonymous Login:
 
 2. Enumeration Phase: Once the attacker identifies systems with anonymous access enabled, they can query for information such as the list of shares (shared folders) available on those systems, as well as user accounts and other system information. This gives the attacker valuable insights into potential targets and vulnerable points.
 
-Command to test SMB Workgroup Enumeration with Anonymous Login:
+Command to test for SMB Workgroup Enumeration with Anonymous Login:
 1. `enum4linux -a IP`
 
 ## SQL Injection
