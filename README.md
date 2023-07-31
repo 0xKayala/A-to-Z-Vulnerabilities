@@ -280,7 +280,10 @@ Script to check for missing security response headers:
 
 var req=new XMLHttpRequest;req.open("GET",document.location,!1),req.send(null);var headers=req.getAllResponseHeaders().toLowerCase(),data=["X-Content-Type-Options","Referrer-Policy","Content-Security-Policy","Strict-Transport-Security","X-Frame-Options","Permissions-Policy","x-xss-protection"];for(console.log("\n\n"),console.log("---------------------Missing Header----------------------"),i=0;i<=6;i++)headers.search(data[i].toLowerCase())<0&&console.log(data[i]);console.log("---------------------------------------------------------\n"),console.log("\n\n");
 
-Paste the above code in the website's console under developer tab
+Paste the above code in the website's console under the developer tab as shown in the below image
+
+![image](https://github.com/0xKayala/A-to-Z-Vulnerabilities/assets/16838353/b32a2664-338d-492e-b1d6-00ebf3704fc2)
+
 
 ## SQL Injection
 
