@@ -17,6 +17,7 @@
 - [Code Injection](#Code-Injection)
 - [Command injection](#Command-injection)
 - [Directory traversal or Path Traversal](#Directory-traversal-or-Path-Traversal)
+- [DNS Zone Transfer](#DNS-Zone-Transfer)
 - [File Inclusion](#File-Inclusion)
     - [Local File Inclusion](#Local-File-Inclusion)
     - [Remote File Inclusion](#Remote-File-Inclusion)
@@ -161,6 +162,18 @@ Image Credits: https://twitter.com/secflashcards
 ## Directory traversal or Path Traversal
 
 Directory traversal (also known as file path traversal) is a web security vulnerability that allows an attacker to read arbitrary files on the server that is running an application. This might include application code and data, credentials for back-end systems, and sensitive operating system files. In some cases, an attacker might be able to write to arbitrary files on the server, allowing them to modify application data or behavior, and ultimately take full control of the server.
+
+## DNS Zone Transfer
+
+DNS Zone Transfer vulnerability, also known as "AXFR (AXIS Forwarding)" vulnerability, is a security weakness that allows unauthorized parties to obtain a complete copy of the DNS zone data from a primary DNS server. This can lead to potential exposure of sensitive information about the domain, such as hostnames, IP addresses, and other DNS records.
+
+The DNS (Domain Name System) protocol uses a hierarchical system of distributed DNS servers to translate human-readable domain names (e.g., example.com) into IP addresses (e.g., 192.168.0.1) used by computers to locate resources on the internet. DNS servers are categorized into primary and secondary servers. The primary DNS server holds the authoritative copy of the DNS zone for a domain, while secondary DNS servers maintain a replica of the zone for redundancy and improved query performance.
+
+The DNS Zone Transfer vulnerability occurs when the primary DNS server is improperly configured to allow zone transfers to any requesting server, rather than limiting access to authorized secondary DNS servers. This misconfiguration can be exploited by attackers using tools like nslookup or other DNS querying tools to request the entire DNS zone data. If the server allows the transfer, the attacker gains access to sensitive information that could be used for reconnaissance or targeted attacks.
+
+Example Commands to check for DNS Zone Transfer:
+1. `nslookup -type=any IP`
+2. `dig axfr @IP`
 
 ## File Inclusion
 
