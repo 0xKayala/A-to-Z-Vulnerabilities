@@ -30,6 +30,7 @@
 - [Insecure Direct Object Reference](#Insecure-Direct-Object-Reference)
 - [Insecure Design](#Insecure-Design)
 - [Identification and Authentication Failures](#Identification-and-Authentication-Failures)
+- [Nmap Vulnerability Scanner](#Nmap-Vulnerability-Scanner)
 - [Security Response Headers Missing](#security-response-headers-missing)
 - [SQL Injection](#SQL-Injection)
     - [In-band SQLi](#In-band-SQLi)
@@ -265,9 +266,38 @@ Attackers use a range of techniques to exploit broken authentication such as:
 1) Brute force/credential stuffing
 2) Session hijacking
 3) Session fixation
-4) Cross Site Request Forgery (CSRF)
+4) Cross-Site Request Forgery (CSRF)
 5) Execution After Redirect (EAR)
 6) One-click attack
+
+## Nmap Vulnerability Scanner
+
+The Nmap vulnerability scanner (also known as “Network Mapper”) is a popular, open-source tool for security auditing and related network discovery. Authorized users can utilize Nmap to identify the devices running on their systems, hosts and the services that may be available. Nmap does a wonderful job of finding open ports and detecting and identifying security risks. Nmap can scale from monitoring one host to large networks that may include hundreds of thousands of devices and subnets.
+
+Nmap has many features and capabilities but fundamentally it is a port-scan tool. Nmap sends packets to ports, monitors responses and then tags the ports as open, closed, or perhaps protected by a firewall. Port scanning is a method of ascertaining which ports on a network may be open and involved with sending or receiving data. Port scanning is also referred to as port discovery or enumeration. Port scanning is different from sniffing, which is the term to monitor traffic on a network. Port scanning is used to determine vulnerabilities on a system that is unknown.
+
+Nmap goes back almost 24 years. Nmap was originally written in C++ and was first introduced complete with a full source listing. Nmap has been extended with C, Perl and Python and still benefits from community developers that have moved the code to Windows, macOS, a variety of Linux distributions and other operating systems.
+
+Nmap functionality:
+Nmap packets go out and then return with IP addresses and other data. This allows an astute user to map the network, ascertain network key attributes, and develop an inventory of both hardware and software. Nmap uses a variety of different protocols including TCP, UDP, SCTP, and ICMP.
+
+Nmap is particularly noteworthy for its depth and breadth of capability and power. Nmap provides other capabilities beyond basic port mapping including:
+
+Service discovery: Nmap identifies hosts and ascertains if they are acting as mail, web or name servers. Nmap can also determine the applications and versions of other software which they are using. 
+Network mapping: Nmap host discovery can include servers, routers and switches, and how they’re physically connected. Host discovery is part of network reconnaissance. A threat actor or an ethical hacker would take a range of IP addresses on a target network and then use various techniques to identify the host at that IP address if one exists. This technique is also called Ping scanning.
+Operating system detection: Nmap can identify the operating system running on devices, including perhaps the vendor and software version.
+Security auditing and risk assessment: Once Nmap identifies the version and applications running on a specific host it can then further determine their open vulnerabilities. Network administrators can investigate external alerts to determine if vulnerable products and operating systems exist within their networks.
+
+Example Nmap commands:
+
+Live host discovery: `nmap -sn -PR 192.168.1.0/24 -Pn`
+
+Nmap vulnerability scan: `sudo nmap -Pn --script vuln -sV host`
+
+Nmap full port scan: `nmap -Pn -sC -sV -T4 -A -O -p- IP`
+
+SSL enumeration: `nmap -Pn -sV --script ssl-enum-ciphers -p 443 <host>`
+
 
 ## Security Response Headers Missing
 
