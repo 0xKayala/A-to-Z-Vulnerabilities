@@ -271,6 +271,11 @@ Attackers use a range of techniques to exploit broken authentication such as:
 
 ## Security Response Headers Missing
 
+Missing security response headers, such as X-Content-Type-Options, Referrer-Policy, Content-Security-Policy, Strict-Transport-Security, X-Frame-Options, Permissions-Policy, and x-xss-protection, can have significant security impacts on the Web Server.
+
+HTTP security headers are a set of standard HTTP response headers proposed to prevent or mitigate known XSS, clickjacking, MIME sniffing and other security vulnerabilities. These response headers define security policies to client browsers so that the browsers avoid exposure to known vulnerabilities when handling requests.
+
+
 Script to check for missing security response headers:
 
 var req=new XMLHttpRequest;req.open("GET",document.location,!1),req.send(null);var headers=req.getAllResponseHeaders().toLowerCase(),data=["X-Content-Type-Options","Referrer-Policy","Content-Security-Policy","Strict-Transport-Security","X-Frame-Options","Permissions-Policy","x-xss-protection"];for(console.log("\n\n"),console.log("---------------------Missing Header----------------------"),i=0;i<=6;i++)headers.search(data[i].toLowerCase())<0&&console.log(data[i]);console.log("---------------------------------------------------------\n"),console.log("\n\n");
