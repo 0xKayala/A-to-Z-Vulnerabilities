@@ -31,8 +31,10 @@
 - [Insecure Direct Object Reference](#Insecure-Direct-Object-Reference)
 - [Insecure Design](#Insecure-Design)
 - [Identification and Authentication Failures](#Identification-and-Authentication-Failures)
+- [LDAP Anonymous Login](#LDAP-Anonymous-Login)
 - [Nmap Vulnerability Scanner](#Nmap-Vulnerability-Scanner)
 - [Security Response Headers Missing](#security-response-headers-missing)
+- [SMB Work Group Enumeration with Anonymous login](#SMB-Work-Group-Enumeration-with-Anonymous-login)
 - [SQL Injection](#SQL-Injection)
     - [In-band SQLi](#In-band-SQLi)
         - [Error-based SQLi](#Error-based-SQLi)
@@ -283,6 +285,17 @@ Attackers use a range of techniques to exploit broken authentication such as:
 5) Execution After Redirect (EAR)
 6) One-click attack
 
+## LDAP Anonymous Login
+
+If we are able to establish a connection to the LDAP service with anonymous credentials then it is considered as an "LDAP Anonymous Login". Allowing anonymous access to an LDAP server can potentially expose sensitive information, such as user account details and organizational structure, to unauthorized users or attackers. We can also enumerate some server-related information with a basic NSE script.
+
+Attackers can use this information for reconnaissance purposes, to identify potential targets and weaknesses in the system, and even launch more sophisticated attacks such as privilege escalation, lateral movement, or data exfiltration.
+
+Therefore, it is generally recommended to disable anonymous access to LDAP servers and require authentications for all connections. This can be achieved by configuring proper access controls, authentication policies, and secure communications protocols such as SSL/TLS.
+
+Command to check for "LDAP Anonymous Login":
+1. `nmap -n -sV --script "ldap* and not brute" IP`
+
 ## Nmap Vulnerability Scanner
 
 The Nmap vulnerability scanner (also known as “Network Mapper”) is a popular, open-source tool for security auditing and related network discovery. Authorized users can utilize Nmap to identify the devices running on their systems, hosts and the services that may be available. Nmap does a wonderful job of finding open ports and detecting and identifying security risks. Nmap can scale from monitoring one host to large networks that may include hundreds of thousands of devices and subnets.
@@ -327,6 +340,18 @@ Paste the above code in the website's console under the developer tab as shown i
 
 ![image](https://github.com/0xKayala/A-to-Z-Vulnerabilities/assets/16838353/b32a2664-338d-492e-b1d6-00ebf3704fc2)
 
+## SMB Work Group Enumeration with Anonymous login
+
+SMB (Server Message Block) is a protocol used for file and printer sharing in Windows-based networks. Workgroup enumeration is a process where an attacker tries to gather information about the systems present in the same workgroup or network by exploiting anonymous login vulnerabilities. In a workgroup, systems can be configured to allow anonymous access, which means users can connect to network shares without providing any credentials.
+
+Description of SMB Workgroup Enumeration with Anonymous Login:
+
+1. Discovery Phase: The attacker scans the network for available systems by sending SMB requests to the IP addresses within the network range. During this process, they identify systems that respond to anonymous SMB requests.<br>
+
+2. Enumeration Phase: Once the attacker identifies systems with anonymous access enabled, they can query for information such as the list of shares (shared folders) available on those systems, as well as user accounts and other system information. This gives the attacker valuable insights into potential targets and vulnerable points.
+
+Command to test SMB Workgroup Enumeration with Anonymous Login:
+1. `enum4linux -a IP`
 
 ## SQL Injection
 
