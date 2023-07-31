@@ -1,6 +1,6 @@
 # A-to-Z-Vulnerabilities [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> This is a Kind of Dictionary which contains all kinds of Web Application Vulnerabilities and other security concepts in an Alphabetical Order
+> This is a Kind of Dictionary which contains all kinds of Web Application and Network Security Vulnerabilities and other security concepts in an Alphabetical Order
 
 ## Contents
 
