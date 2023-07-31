@@ -168,7 +168,7 @@ The File Inclusion vulnerability allows an attacker to include a file, usually e
 This can lead to something as outputting the contents of the file, but depending on the severity, it can also lead to:
 
 1) Code execution on the web server
-2) Code execution on the client-side such as JavaScript which can lead to other attacks such as cross site scripting (XSS)
+2) Code execution on the client-side such as JavaScript which can lead to other attacks such as cross-site scripting (XSS)
 3) Denial of Service (DoS)
 4) Sensitive Information Disclosure
 
@@ -283,10 +283,10 @@ Nmap packets go out and then return with IP addresses and other data. This allow
 
 Nmap is particularly noteworthy for its depth and breadth of capability and power. Nmap provides other capabilities beyond basic port mapping including:
 
-Service discovery: Nmap identifies hosts and ascertains if they are acting as mail, web or name servers. Nmap can also determine the applications and versions of other software which they are using. 
-Network mapping: Nmap host discovery can include servers, routers and switches, and how they’re physically connected. Host discovery is part of network reconnaissance. A threat actor or an ethical hacker would take a range of IP addresses on a target network and then use various techniques to identify the host at that IP address if one exists. This technique is also called Ping scanning.
-Operating system detection: Nmap can identify the operating system running on devices, including perhaps the vendor and software version.
-Security auditing and risk assessment: Once Nmap identifies the version and applications running on a specific host it can then further determine their open vulnerabilities. Network administrators can investigate external alerts to determine if vulnerable products and operating systems exist within their networks.
+**Service discovery:** Nmap identifies hosts and ascertains if they are acting as mail, web or name servers. Nmap can also determine the applications and versions of other software which they are using.<br>
+**Network mapping:** Nmap host discovery can include servers, routers and switches, and how they’re physically connected. Host discovery is part of network reconnaissance. A threat actor or an ethical hacker would take a range of IP addresses on a target network and then use various techniques to identify the host at that IP address if one exists. This technique is also called Ping scanning.<br>
+**Operating system detection:** Nmap can identify the operating system running on devices, including perhaps the vendor and software version.<br>
+**Security auditing and risk assessment:** Once Nmap identifies the version and applications running on a specific host it can then further determine their open vulnerabilities. Network administrators can investigate external alerts to determine if vulnerable products and operating systems exist within their networks.<br>
 
 Example Nmap commands:
 
