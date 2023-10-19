@@ -4,6 +4,20 @@
 
 ## Contents
 
+- [Injection Vulnerabilities](#Injection-Vulnerabilities)
+    - [SQL Injection](#SQLi)
+    - [Cross-Site Scripting](#XSS)
+    - [Cross-Site Request Forgery](#CSRF)
+    - [Remote Code Execution](#RCE)
+    - [Command Injection](#CMDi)
+    - [XML Injection](#XMLi)
+    - [LDAP Injection](#LDAPi)
+    - [XPath Injection](#XPathi)
+    - [HTML Injection](#HTMLi)
+    - [Server-Side Includes Injection](#SSI)
+    - [OS Command Injection](#OSCMDi)
+    - [Blind SQL Injection](#BSQLi)
+    - [Server-Side Template Injection](#SSTI)
 - [Authentication Bypass](#Authentication-Bypass)
 - [Broken Access Control](#Broken-Access-Control)
 - [Business Logic Flaw](#Business-Logic-Flaw)
