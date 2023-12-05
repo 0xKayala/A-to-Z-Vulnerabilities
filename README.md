@@ -1,6 +1,6 @@
 # A-to-Z-Vulnerabilities [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> This is a Kind of Dictionary which contains all kinds of Web Application and Network Security Vulnerabilities and other security concepts in an Alphabetical Order
+> This is a Kind of Dictionary which contains all kinds of Vulnerabilities and security concepts of Web Applications, Mobile Applications and Network Architectures in an Alphabetical Order.
 
 ## Contents
 
@@ -118,7 +118,7 @@
     - [83. Unauthorized Access to Smart Homes]
     - [84. IoT Data Privacy Issues]
 
-- [Authentication Bypass]
+- [Authentication Bypass](#Authentication-Bypass)
     - [85. Insecure "Remember Me" Functionality]
     - [86. CAPTCHA Bypass]
 
@@ -144,8 +144,6 @@
     - [99. Unpatched Vulnerabilities]
     - [100. Day-Zero Exploits]
  
-- [Authentication Bypass](#Authentication-Bypass)
-- [Broken Access Control](#Broken-Access-Control)
 - [Business Logic Flaw](#Business-Logic-Flaw)
 - [Cross-Site Scripting](#Cross-Site-Scripting)
     - [Reflected XSS](#Reflected-XSS)
