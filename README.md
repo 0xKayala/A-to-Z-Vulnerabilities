@@ -117,7 +117,7 @@
 
 - [Mobile Web Vulnerabilities](#Mobile-Web-Vulnerabilities)
     - [77. Insecure Data Storage on Mobile Devices](#Insecure-Data-Storage-on-Mobile-Devices)
-    - [78. Insecure Data Transmission on Mobile Devices](#Insecure-Data-Transmission-on-Mobile Devices)
+    - [78. Insecure Data Transmission on Mobile Devices](#Insecure-Data-Transmission-on-Mobile-Devices)
     - [79. Insecure Mobile API Endpoints](#Insecure-Mobile-API-Endpoints)
     - [80. Mobile App Reverse Engineering](#Mobile-App-Reverse-Engineering)
 
