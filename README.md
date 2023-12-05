@@ -1,23 +1,32 @@
 # A-to-Z-Vulnerabilities [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> This is a Kind of Dictionary which contains all kinds of Vulnerabilities and security concepts of Web Applications, Mobile Applications and Network Architectures in an Alphabetical Order.
+> This is a Kind of Dictionary which contains all kinds of Vulnerabilities and security concepts of Web Applications, Mobile Applications and Network Architectures in Alphabetical Order.
 
 ## Contents
 
 - [Injection Vulnerabilities](#Injection-Vulnerabilities)
-    - [1. SQL Injection](#SQLi)
-    - [2. Cross-Site Scripting](#XSS)
-    - [3. Cross-Site Request Forgery](#CSRF)
-    - [4. Remote Code Execution](#RCE)
-    - [5. Command Injection](#CMDi)
-    - [6. XML Injection](#XMLi)
-    - [7. LDAP Injection](#LDAPi)
-    - [8. XPath Injection](#XPathi)
-    - [9. HTML Injection](#HTMLi)
-    - [10. Server-Side Includes Injection](#SSI)
-    - [11. OS Command Injection](#OSCMDi)
-    - [12. Blind SQL Injection](#BSQLi)
-    - [13. Server-Side Template Injection](#SSTI)
+    - [1. SQL Injection](#SQL-Injection)
+        - [1.1 In-band SQL Injection](#In-band-SQL-Injection)
+            - [Error-based SQL Injection](#Error-based-SQL-Injection)
+            - [Union-based SQL Injection](#Union-based-SQL-Injection)
+        - [1.2 Blind SQL Injection](#Blind-SQL-Injection)
+            - [Boolean SQL Injection](#Boolean-SQL-Injection)
+            - [Time-based SQL Injection](#Time-based-SQL-Injection)
+        - [1.3 Out-of-band SQLi](#Out-of-band-SQLi)
+    - [2. Cross-Site Scripting](#Cross-Site-Scripting)
+        - [2.1 Reflected Cross-Site Scripting](#Reflected-Cross-Site-Scripting)
+        - [2.2 Stored Cross-Site Scripting](#Stored-Cross-Site-Scripting)
+        - [2.3 DOM Cross-Site Scripting](#DOM-Cross-Site-Scripting)
+    - [3. Cross-Site Request Forgery](#Cross-site-Request-Forgery)
+    - [4. Remote Code Execution](#Remote-Code-Execution)
+    - [5. Command Injection](#Command-Injection)
+    - [6. XML Injection](#XML-Injection)
+    - [7. LDAP Injection](#LDAP-Injection)
+    - [8. XPath Injection](#XPath-Injection)
+    - [9. HTML Injection](#HTML-Injection)
+    - [10. Server-Side Includes Injection](#Server-Side-Includes-Injection)
+    - [11. OS Command Injection](#OS-Command-Injection)
+    - [13. Server-Side Template Injection](#Server-Side-Template-Injection)
 
 - [Broken Authentication and Session Management](#Broken-Authentication-and-Session-Management)
     - [14. Session Fixation](#Session-Fixation)
@@ -49,14 +58,14 @@
     - [36. HTTP Security Headers Misconfiguration](#HTTP-Security-Headers-Misconfiguration)
 
 - [XML-Related Vulnerabilities](#XML-Related-Vulnerabilities)
-    - [37. XML External Entity Injection](#XXE)
-    - [38. XML Entity Expansion](#XEE)
+    - [37. XML External Entity Injection](#XML-External-Entity-Injection)
+    - [38. XML Entity Expansion](#XML-Entity-Expansion)
     - [39. XML Bomb](#XML-Bomb)
 
 - [Broken Access Control](#Broken-Access-Control)
     - [40. Inadequate Authorization](#Inadequate-Authorization)
     - [41. Privilege Escalation](#Privilege-Escalation)
-    - [42. Insecure Direct Object References](#IDOR)
+    - [42. Insecure Direct Object References](#Insecure-Direct-Object-References)
     - [43. Forceful Browsing](#Forceful-Browsing)
     - [44. Missing Function-Level Access Control](#Missing-Function-Level-Access-Control)
 
@@ -65,91 +74,86 @@
     - [46. Data Tampering](#Data-Tampering)
     - [47. Object Injection](#Object-Injection)
 
-- [API Security Issues]
-    - [48. Insecure API Endpoints]
-    - [49. API Key Exposure]
-    - [50. Lack of Rate Limiting]
-    - [51. Inadequate Input Validation]
+- [API Security Issues](#API-Security-Issues)
+    - [48. Insecure API Endpoints](#Insecure-API-Endpoints)
+    - [49. API Key Exposure](#API-Key-Exposure)
+    - [50. Lack of Rate Limiting](#Lack-of-Rate-Limiting)
+    - [51. Inadequate Input Validation](#Inadequate-Input-Validation)
 
-- [Insecure Communication]
-    - [52. Man-in-the-Middle (MITM) Attack]
-    - [53. Insufficient Transport Layer Security]
-    - [54. Insecure SSL/TLS Configuration]
-    - [55. Insecure Communication Protocols]
+- [Insecure Communication](#Insecure-Communication)
+    - [52. Man-in-the-Middle Attack](#Man-in-the-Middle-Attack)
+    - [53. Insufficient Transport Layer Security](#Insufficient-Transport-Layer-Security)
+    - [54. Insecure SSL/TLS Configuration](#Insecure-SSL/TLS-Configuration)
+    - [55. Insecure Communication Protocols](#Insecure-Communication-Protocols)
 
-- [Client-Side Vulnerabilities]
-    - [56. DOM-based XSS]
-    - [57. Insecure Cross-Origin Communication]
-    - [58. Browser Cache Poisoning]
-    - [59. Clickjacking]
-    - [60. HTML5 Security Issues]
+- [Client-Side Vulnerabilities](#Client-Side-Vulnerabilities)
+    - [56. DOM Cross-Site Scripting](#DOM-Cross-Site-Scripting)
+    - [57. Insecure Cross-Origin Communication](#Insecure-Cross-Origin-Communication)
+    - [58. Browser Cache Poisoning](#Browser-Cache-Poisoning)
+    - [59. Clickjacking](#Clickjacking)
+    - [60. HTML5 Security Issues](#HTML5-Security-Issues)
 
-- [Denial of Service (DoS)]
-    - [61. Distributed Denial of Service (DDoS)]
-    - [62. Application Layer DoS]
-    - [63. Resource Exhaustion]
-    - [64. Slowloris Attack]
-    - [65. XML Denial of Service]
+- [Denial of Service](#Denial-of-Service)
+    - [61. Distributed Denial of Service](#Distributed-Denial-of-Service)
+    - [62. Application Layer DoS](#Application-Layer-DoS)
+    - [63. Resource Exhaustion](#Resource-Exhaustion)
+    - [64. Slowloris Attack](#Slowloris-Attack)
+    - [65. XML Denial of Service](#XML-Denial-of-Service)
 
 - [Other Web Vulnerabilities]
-    - [66. Server-Side Request Forgery (SSRF)]
-    - [67. HTTP Parameter Pollution (HPP)]
-    - [68. Insecure Redirects and Forwards]
-    - [69. File Inclusion Vulnerabilities]
-    - [70. Security Header Bypass]
-    - [71. Clickjacking]
-    - [72. Inadequate Session Timeout]
-    - [73. Insufficient Logging and Monitoring]
-    - [74. Business Logic Vulnerabilities]
-    - [75. API Abuse]
+    - [66. Server-Side Request Forgery](#Server-Side-Request-Forgery)
+    - [67. HTTP Parameter Pollution](#HTTP-Parameter-Pollution)
+    - [68. Insecure Redirects and Forwards](#Insecure-Redirects-and-Forwards)
+    - [69. File Inclusion Vulnerabilities](#File-Inclusion-Vulnerabilities)
+    - [70. Security Header Bypass](#Security-Header-Bypass)
+    - [71. Clickjacking](#Clickjacking)
+    - [72. Inadequate Session Timeout](#Inadequate-Session-Timeout)
+    - [73. Insufficient Logging and Monitoring](#Insufficient-Logging-and-Monitoring)
+    - [74. Business Logic Vulnerabilities](#Business-Logic-Vulnerabilities)
+    - [75. API Abuse](#API-Abuse)
 
-- [Mobile Web Vulnerabilities]
-    - [76. Insecure Data Storage on Mobile Devices]
-    - [77. Insecure Data Transmission on Mobile Devices]
-    - [78. Insecure Mobile API Endpoints]
-    - [79. Mobile App Reverse Engineering]
+- [Mobile Web Vulnerabilities](#Mobile-Web-Vulnerabilities)
+    - [76. Insecure Data Storage on Mobile Devices](#Insecure-Data-Storage-on-Mobile-Devices)
+    - [77. Insecure Data Transmission on Mobile Devices](#Insecure-Data-Transmission-on-Mobile Devices)
+    - [78. Insecure Mobile API Endpoints](#Insecure-Mobile-API-Endpoints)
+    - [79. Mobile App Reverse Engineering](#Mobile-App-Reverse-Engineering)
 
-- [IoT Web Vulnerabilities]
-    - [80. Insecure IoT Device Management]
-    - [81. Weak Authentication on IoT Devices]
-    - [82. IoT Device Vulnerabilities]
+- [IoT Web Vulnerabilities](#IoT-Web-Vulnerabilities)
+    - [80. Insecure IoT Device Management](#Insecure-IoT-Device-Management)
+    - [81. Weak Authentication on IoT Devices](#Weak-Authentication-on-IoT-Devices)
+    - [82. IoT Device Vulnerabilities](#IoT-Device-Vulnerabilities)
 
-- [Web of Things (WoT) Vulnerabilities]
-    - [83. Unauthorized Access to Smart Homes]
-    - [84. IoT Data Privacy Issues]
+- [Web of Things (WoT) Vulnerabilities](#Web-of-Things-(WoT)-Vulnerabilities)
+    - [83. Unauthorized Access to Smart Homes](#Unauthorized-Access-to-Smart-Homes)
+    - [84. IoT Data Privacy Issues](#IoT-Data-Privacy-Issues)
 
 - [Authentication Bypass](#Authentication-Bypass)
-    - [85. Insecure "Remember Me" Functionality]
-    - [86. CAPTCHA Bypass]
+    - [85. Insecure "Remember Me" Functionality](#Insecure-"Remember-Me"-Functionality)
+    - [86. CAPTCHA Bypass](#CAPTCHA-Bypass)
 
-- [Server-Side Request Forgery (SSRF)]
-    - [87. Blind SSRF]
-    - [88. Time-Based Blind SSRF]
+- [Server-Side Request Forgery](#Server-Side-Request-Forgery)
+    - [87. Blind Server-Side Request Forgery](#Blind-Server-Side-Request-Forgery)
+    - [88. Time-Based Blind Server-Side Request Forgery](#Time-Based-Blind-Server-Side-Request-Forgery)
 
-- [Content Spoofing]
-    - [89. MIME Sniffing]
-    - [90. X-Content-Type-Options Bypass]
-    - [91. Content Security Policy (CSP) Bypass]
+- [Content Spoofing](#Content-Spoofing)
+    - [89. MIME Sniffing](#MIME-Sniffing)
+    - [90. X-Content-Type-Options Bypass](#X-Content-Type-Options-Bypass)
+    - [91. Content Security Policy Bypass](#Content-Security-Policy-Bypass)
 
-- [Business Logic Flaws]
-    - [92. Inconsistent Validation]
-    - [93. Race Conditions]
-    - [94. Order Processing Vulnerabilities]
-    - [95. Price Manipulation]
-    - [96. Account Enumeration]
-    - [97. User-Based Flaws]
+- [Business Logic Flaws](#Business-Logic-Flaws)
+    - [92. Inconsistent Validation](#Inconsistent-Validation)
+    - [93. Race Conditions](#Race-Conditions)
+    - [94. Order Processing Vulnerabilities](#Order-Processing-Vulnerabilities)
+    - [95. Price Manipulation](#Price-Manipulation)
+    - [96. Account Enumeration](#Account-Enumeration)
+    - [97. User-Based Flaws](#User-Based-Flaws)
 
-- [Zero-Day Vulnerabilities]
-    - [98. Unknown Vulnerabilities]
-    - [99. Unpatched Vulnerabilities]
-    - [100. Day-Zero Exploits]
+- [Zero-Day Vulnerabilities](#Zero-Day-Vulnerabilities)
+    - [98. Unknown Vulnerabilities](#Unknown-Vulnerabilities)
+    - [99. Unpatched Vulnerabilities](#Unpatched-Vulnerabilities)
+    - [100. Day-Zero Exploits](#Day-Zero-Exploits)
  
-- [Business Logic Flaw](#Business-Logic-Flaw)
-- [Cross-Site Scripting](#Cross-Site-Scripting)
-    - [Reflected XSS](#Reflected-XSS)
-    - [Stored XSS](#Stored-XSS)
-    - [DOM XSS](#DOM-XSS)
-- [Cross-site Request Forgery](#Cross-site-Request-Forgery)
+
 - [Cross-Origin Resource Sharing](#Cross-Origin-Resource-Sharing)
 - [Cryptographic Failures](#Cryptographic-Failures)
 - [Code Injection](#Code-Injection)
@@ -165,7 +169,6 @@
 - [HTTP Headers](#HTTP-Headers)
     - [HTTP Request Header](#HTTP-Request-Header)
     - [HTTP Response Header](#HTTP-Response-Header)
-- [Injection](#Injection)
 - [Insecure Direct Object Reference](#Insecure-Direct-Object-Reference)
 - [Insecure Design](#Insecure-Design)
 - [Identification and Authentication Failures](#Identification-and-Authentication-Failures)
@@ -174,21 +177,12 @@
 - [Remote Code Execution on SMB 3.1.1](#Remote-Code-Execution-on-SMB-3.1.1)
 - [Security Response Headers Missing](#security-response-headers-missing)
 - [SMB Work Group Enumeration with Anonymous login](#SMB-Work-Group-Enumeration-with-Anonymous-login)
-- [SQL Injection](#SQL-Injection)
-    - [In-band SQLi](#In-band-SQLi)
-        - [Error-based SQLi](#Error-based-SQLi)
-        - [Union-based SQLi](#Union-based-SQLi)
-    - [Blind SQLi](#Blind-SQLi)
-        - [Boolean](#Boolean)
-        - [Time-based](#Time-based)
-    - [Out-of-band SQLi](#Out-of-band-SQLi)
 - [Security Misconfiguration](#Security-Misconfiguration)
 - [Software and Data Integrity Failures](#Software-and-Data-Integrity-Failures)
 - [Security Logging and Monitoring Failures](#Security-Logging-and-Monitoring-Failures)
 - [Server-side Request Forgery](#Server-side-Request-Forgery)
 - [Server Side Template Injection](#Server-Side-Template-Injection)
 - [Vulnerable and Outdated components](#Vulnerable-and-Outdated-components)
-- [XML External Entity](#XML-External-Entity)
 
 
 ---
@@ -222,14 +216,14 @@ Image Credits: https://www.geeksforgeeks.org/
 
 ![BAC](https://user-images.githubusercontent.com/16838353/196788103-8f86536d-cd1b-41b2-9777-2e0d88e3e4d3.png)
 
-## Business Logic Flaw
+## Business Logic Flaws
 
-Business logic vulnerabilities are flaws in the design and implementation of an application that allow an attacker to elicit unintended behavior.
+Business logic vulnerabilities are flaws in the design and implementation of an application that allows an attacker to elicit unintended behaviour.
 This potentially enables attackers to manipulate legitimate functionality to achieve a malicious goal.
 
 ## Cross-Site Scripting
 
-XSS is a client-side code injection where the attacker tries to inject malicious script into a trusted site. This script is in the form of JavaScript code, which can redirect a victim from their legitimate site to an attacker site without their knowledge. This weakness in an application allows an attacker to steal cookies, steal user sessions, and thereby gaining illegitimate access to the system.
+XSS is a client-side code injection where the attacker tries to inject a malicious script into a trusted site. This script is in the form of JavaScript code, which can redirect a victim from their legitimate site to an attacker site without their knowledge. This weakness in an application allows an attacker to steal cookies, steal user sessions, and thereby gain illegitimate access to the system.
 
 Source: https://securityzines.com/ |
 Image Credits: https://twitter.com/sec_r0
