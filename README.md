@@ -100,7 +100,7 @@
     - [64. Slowloris Attack](#Slowloris-Attack)
     - [65. XML Denial of Service](#XML-Denial-of-Service)
 
-- [Other Web Vulnerabilities]
+- [Other Web Vulnerabilities](#Other-Web-Vulnerabilities)
     - [66. Server-Side Request Forgery](#Server-Side-Request-Forgery)
     - [67. HTTP Parameter Pollution](#HTTP-Parameter-Pollution)
     - [68. Insecure Redirects and Forwards](#Insecure-Redirects-and-Forwards)
