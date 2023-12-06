@@ -260,7 +260,7 @@ Image Credits: https://twitter.com/sec_r0
 
 ![CSRF](https://user-images.githubusercontent.com/16838353/196786974-d30c9660-7453-4b0f-bca0-897c21a1ebe6.jpg)
 
-## Cross-Origin Resource Sharing
+## Cross-Origin Resource Sharing (CORS)
 
 Cross-Origin Resource Sharing (CORS) - is a browser mechanism which enables controlled access to resources located outside of a given domain. It extends and adds flexibility to the same-origin policy (SOP). However, it also provides potential for cross-domain attacks, if a website's CORS policy is poorly configured and implemented. CORS is not a protection against cross-origin attacks such as cross-site request forgery (CSRF)
 
@@ -268,6 +268,29 @@ Source: https://securityzines.com/ |
 Image Credits: https://twitter.com/sec_r0
 
 ![cors](https://user-images.githubusercontent.com/16838353/196784777-b5ab1c7a-46e9-465f-82c9-4749617dfdd6.png)
+
+## Same-origin policy (SOP)
+
+The same-origin policy is a web browser security mechanism that aims to prevent websites from attacking each other.
+
+The same-origin policy restricts scripts on one origin from accessing data from another origin. An origin consists of a URI scheme, domain and port number. For example, consider the following URL:
+
+`http://normal-website.com/example/example.html`
+
+This uses the scheme `http`, the domain `normal-website.com`, and the port number `80`. The following table shows how the same-origin policy will be applied if the content at the above URL tries to access other origins:
+
+<table>
+<thead>
+<tr>
+<th><strong>URL accessed</strong></th>
+<th><strong>Access permitted?</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>http://normal-website.com/example/</code></td>
+<td>Yes: same scheme, domain, and port</td>
+</tr>
 
 ## Cryptographic Failures
 
