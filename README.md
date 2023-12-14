@@ -225,7 +225,7 @@ Image Credits: https://twitter.com/sec_r0
 
 ![image](https://user-images.githubusercontent.com/16838353/196904106-1633ecc9-3076-464b-aabd-ad6d6400c90b.png)
 
-### Reflected XSS
+### Reflected Cross-Site Scripting
 
 Reflected XSS attack occurs when a malicious script is reflected in the website’s results or response.
 
@@ -234,7 +234,7 @@ Image Credits: https://twitter.com/sec_r0
 
 ![rxss](https://user-images.githubusercontent.com/16838353/196875177-70fe8797-2526-41f3-b457-379a3711486d.png)
 
-### Stored XSS
+### Stored Cross-Site Scripting
 
 The malicious data is stored permanently on a database and is later accessed and run by the victims without knowing the attack
 
@@ -243,7 +243,7 @@ Image Credits: https://twitter.com/sec_r0
 
 <img width="1743" alt="stored-xss" src="https://user-images.githubusercontent.com/16838353/196875328-0ca9bfad-faa9-4e57-9fe8-0bd54f9b89c6.png">
 
-### DOM XSS
+### DOM Cross-Site Scripting
 
 DOM Based XSS wherein the attacker’s payload is executed due to modifying the DOM “environment” in the victim’s browser used by the original client-side script. The client-side code runs in an “unexpected” manner
 
