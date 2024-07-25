@@ -465,15 +465,27 @@ Nmap is particularly noteworthy for its depth and breadth of capability and powe
 **Operating system detection:** Nmap can identify the operating system running on devices, including perhaps the vendor and software version.<br>
 **Security auditing and risk assessment:** Once Nmap identifies the version and applications running on a specific host it can then further determine their open vulnerabilities. Network administrators can investigate external alerts to determine if vulnerable products and operating systems exist within their networks.<br>
 
-Example Nmap commands:
+**Example Nmap commands:**
 
-Live host discovery: `nmap -sn -PR 192.168.1.0/24 -Pn`
+Live host discovery: 🢃
+```
+nmap -sn -PR 192.168.1.0/24 -Pn
+```
 
-Nmap vulnerability scan: `sudo nmap -Pn --script vuln -sV host`
+Nmap vulnerability scan: 🢃
+```
+sudo nmap -Pn --script vuln -sV host
+```
 
-Nmap full port scan: `nmap -Pn -sC -sV -T4 -A -O -p- IP`
+Nmap full port scan: 🢃
+```
+nmap -Pn -sC -sV -T4 -A -O -p- IP
+```
 
-SSL enumeration: `nmap -Pn -sV --script ssl-enum-ciphers -p 443 <host>`
+SSL enumeration: 🢃
+```
+nmap -Pn -sV --script ssl-enum-ciphers -p 443 <host>
+```
 
 ## Remote Code Execution on SMB 3.1.1
 
@@ -510,7 +522,7 @@ var data = [
 ];
 
 console.log("\n\n");
-console.log("%c---------------------Missing Header----------------------", "color: red; font-weight: bold;");
+console.log("%c---------------------Missing Headers----------------------", "color: red; font-weight: bold;");
 for (var i = 0; i < data.length; i++) {
     if (headers.search(data[i].toLowerCase()) < 0) {
         console.log("%c" + data[i], "color: blue; font-weight: bold;");
@@ -520,7 +532,7 @@ console.log("%c---------------------------------------------------------\n", "co
 console.log("\n\n");
 ```
 
-Paste the above code in the website's console under the developer tab as shown in the below image
+**Note:** Paste the above code in the website's console under the developer tab as shown in the below image
 
 ![image](https://github.com/0xKayala/A-to-Z-Vulnerabilities/assets/16838353/b32a2664-338d-492e-b1d6-00ebf3704fc2)
 
