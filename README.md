@@ -1,6 +1,6 @@
 # A-to-Z-Vulnerabilities [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> This is a Kind of Dictionary which contains all kinds of Vulnerabilities and security concepts of Web Applications, Mobile Applications and Network Architectures in Alphabetical Order.
+> This is a Kind of Dictionary that contains all kinds of Vulnerabilities and security concepts of Web Applications, Mobile Applications and Network Architectures in Alphabetical Order.
 
 ## Contents
 
@@ -494,7 +494,31 @@ HTTP security headers are a set of standard HTTP response headers proposed to pr
 
 Script to check for missing security response headers:
 
-var req=new XMLHttpRequest;req.open("GET",document.location,!1),req.send(null);var headers=req.getAllResponseHeaders().toLowerCase(),data=["X-Content-Type-Options","Referrer-Policy","Content-Security-Policy","Strict-Transport-Security","X-Frame-Options","Permissions-Policy","x-xss-protection"];for(console.log("\n\n"),console.log("---------------------Missing Header----------------------"),i=0;i<=6;i++)headers.search(data[i].toLowerCase())<0&&console.log(data[i]);console.log("---------------------------------------------------------\n"),console.log("\n\n");
+```
+var req = new XMLHttpRequest();
+req.open("GET", document.location, false);
+req.send(null);
+var headers = req.getAllResponseHeaders().toLowerCase();
+var data = [
+    "X-Content-Type-Options",
+    "Referrer-Policy",
+    "Content-Security-Policy",
+    "Strict-Transport-Security",
+    "X-Frame-Options",
+    "Permissions-Policy",
+    "X-XSS-Protection"
+];
+
+console.log("\n\n");
+console.log("%c---------------------Missing Header----------------------", "color: red; font-weight: bold;");
+for (var i = 0; i < data.length; i++) {
+    if (headers.search(data[i].toLowerCase()) < 0) {
+        console.log("%c" + data[i], "color: blue; font-weight: bold;");
+    }
+}
+console.log("%c---------------------------------------------------------\n", "color: red; font-weight: bold;");
+console.log("\n\n");
+```
 
 Paste the above code in the website's console under the developer tab as shown in the below image
 
