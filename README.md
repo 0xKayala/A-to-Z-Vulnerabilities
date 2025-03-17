@@ -490,8 +490,9 @@ nmap -Pn -sV --script ssl-enum-ciphers -p 443 <host>
 SSL enumeration: 🢃
 ```
 For More Advanced Commands, reference the below document:
-
 ```
+Link: [embed] https://media.licdn.com/dms/document/media/v2/D561FAQFuE6IGDccJYg/feedshare-document-pdf-analyzed/B56ZVdNobOGQAg-/0/1741025622915?e=1743033600&v=beta&t=e6Q9jD37ooOUpHkESSnemecleKVxyCORFCGNmJ5zKvQ.pdf [/embed]
+
 
 ## Remote Code Execution on SMB 3.1.1
 
