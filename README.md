@@ -487,11 +487,13 @@ SSL enumeration: 🢃
 nmap -Pn -sV --script ssl-enum-ciphers -p 443 <host>
 ```
 
-SSL enumeration: 🢃
-```
-For More Advanced Commands, reference the below document:
-```
-Link: [embed] https://media.licdn.com/dms/document/media/v2/D561FAQFuE6IGDccJYg/feedshare-document-pdf-analyzed/B56ZVdNobOGQAg-/0/1741025622915?e=1743033600&v=beta&t=e6Q9jD37ooOUpHkESSnemecleKVxyCORFCGNmJ5zKvQ.pdf [/embed]
+13 Must-Known NMAP Commands: 🢃
+
+![Nmap Commands](https://github.com/user-attachments/assets/d38fdb4b-ddb7-468e-b910-517dc3994e60)
+
+For More Advanced Commands, reference the below document: 🢃
+
+**Link:** [**Nmap for Red Teamers**](https://github.com/0xKayala/A-to-Z-Vulnerabilities/blob/main/Nmap%20for%20Red%20Teamers.pdf)
 
 
 ## Remote Code Execution on SMB 3.1.1
