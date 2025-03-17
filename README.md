@@ -465,7 +465,7 @@ Nmap is particularly noteworthy for its depth and breadth of capability and powe
 **Operating system detection:** Nmap can identify the operating system running on devices, including perhaps the vendor and software version.<br>
 **Security auditing and risk assessment:** Once Nmap identifies the version and applications running on a specific host it can then further determine their open vulnerabilities. Network administrators can investigate external alerts to determine if vulnerable products and operating systems exist within their networks.<br>
 
-**Example Nmap commands:**
+**Nmap Cheatsheet Commands:**
 
 Live host discovery: 🢃
 ```
@@ -485,6 +485,12 @@ nmap -Pn -sC -sV -T4 -A -O -p- IP
 SSL enumeration: 🢃
 ```
 nmap -Pn -sV --script ssl-enum-ciphers -p 443 <host>
+```
+
+SSL enumeration: 🢃
+```
+For More Advanced Commands, reference the below document:
+
 ```
 
 ## Remote Code Execution on SMB 3.1.1
