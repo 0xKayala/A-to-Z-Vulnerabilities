@@ -491,7 +491,7 @@ nmap -Pn -sV --script ssl-enum-ciphers -p 443 <host>
 
 ![Nmap Commands](https://github.com/user-attachments/assets/d38fdb4b-ddb7-468e-b910-517dc3994e60)
 
-For More Advanced Commands, reference the below document: 🢃
+For More Advanced Commands, refer below document: 🢃
 
 **Link:** [**Nmap for Red Teamers**](https://github.com/0xKayala/A-to-Z-Vulnerabilities/blob/main/Nmap%20for%20Red%20Teamers.pdf)
 
