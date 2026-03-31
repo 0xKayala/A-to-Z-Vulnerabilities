@@ -418,10 +418,6 @@ Image Credits: https://twitter.com/sec_r0
 
 ![image](https://user-images.githubusercontent.com/16838353/196883328-5047f9dd-3fcc-48f8-aff7-dad27e20ec86.png)
 
-## Injection
-
-During an injection attack, an attacker can provide malicious input to a web application (inject it) and change the operation of the application by forcing it to execute certain commands. An injection attack can expose or damage data and lead to a denial of service or a full web server compromise. Such attacks are possible due to vulnerabilities in the code of an application that allows for unvalidated user input. Injection attacks are one of the most common and dangerous web attacks. Injection vulnerability is ranked #1 in the OWASP Top Ten Web Application Security Risks. Several injection attacks are also featured in the Common Weakness Enumeration (CWE)
-
 ## Insecure Direct Object Reference
 
 Insecure Direct Object Reference (IDOR) - This vulnerability happens when the application doesn’t properly validate access to resources through IDs. For example, an application shows a purchase order to the customer using the /orders/1234 endpoint. However, the user whose order id is 1234 can also access other orders by simply changing the order id. This is the simplest scenario, but there are many other techniques to exploit an IDOR vulnerability
@@ -574,6 +570,18 @@ Description of SMB Workgroup Enumeration with Anonymous Login:
 
 Command to test for SMB Workgroup Enumeration with Anonymous Login:
 1. `enum4linux -a IP`
+
+## Injection
+
+During an injection attack, an attacker can provide malicious input to a web application (inject it) and change the operation of the application by forcing it to execute certain commands. An injection attack can expose or damage data and lead to a denial of service or a full web server compromise. Such attacks are possible due to vulnerabilities in the code of an application that allows for unvalidated user input. Injection attacks are one of the most common and dangerous web attacks. Injection vulnerability is ranked #1 in the OWASP Top Ten Web Application Security Risks. Several injection attacks are also featured in the Common Weakness Enumeration (CWE)
+
+or
+
+Injection vulnerabilities occur when user input is interpreted as executable commands within an application. This typically happens when input validation is missing or insufficient, allowing attackers to inject malicious code that alters the behavior of the application. The most common form of injection is SQL injection, where attackers manipulate database queries to retrieve or modify sensitive data.
+
+For example, a login system may construct a query such as SELECT * FROM users WHERE username='admin' AND password='123'. If the application inserts user input directly into the query without sanitization, attackers can modify the query logic by injecting SQL fragments. This may allow authentication bypass or extraction of database contents.
+
+During penetration testing, injection vulnerabilities are discovered by sending crafted input and observing how the application processes it. Testers often combine manual techniques with automated tools like SQLMap to identify injection points and extract database information.
 
 ## SQL Injection
 
