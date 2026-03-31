@@ -186,7 +186,7 @@
 
 An attacker gains access to application, service, or device with the privileges of an authorized or privileged user by evading or circumventing an authentication mechanism. The attacker is therefore able to access protected data without authentication ever having taken place. This refers to an attacker gaining access equivalent to an authenticated user without ever going through an authentication procedure. This is usually the result of the attacker using an unexpected access procedure that does not go through the proper checkpoints where authentication should occur. For example, a web site might assume that all users will click through a given link in order to get to secure material and simply authenticate everyone that clicks the link. However, an attacker might be able to reach secured web content by explicitly entering the path to the content rather than clicking through the authentication link, thereby avoiding the check entirely. This attack pattern differs from other authentication attacks in that attacks of this pattern avoid authentication entirely, rather than faking authentication by exploiting flaws or by stealing credentials from legitimate users.
 
-Mitigation:
+**Mitigation:**
 1) Do not rely on client side only make the checks at the server side.
 2) Verifying the client side and taking decisions is very very dangerous.
 3) Use authentication based on strong tokens such as json web token mechanism.
@@ -198,9 +198,17 @@ Image Credits: https://www.bugcrowd.com/blog/authentication-bypass/
 
 ## Broken Access Control
 
-Broken acess control is flaw in web application which is occur due to "poor implementation" of access control mechanism that can be easily exploited. This flaw allow attacker/unauthorised user to access the contents that they are not allowed to view, can perform unauthorised functions, even an attacker can delete the content, or take over site administration. There are many vulnerabilities which contribute to this risk, For instance, if the developer forgets to validate permissions when dealing with identifiers, the application becomes vulnerable to Insecure Direct Object Reference (IDOR). Other vulnerabilities include Cross-site Request Forgery (CSRF), Cross-Origin Resource Sharing (CORS) misconfigurations, directory traversal and forced browsing
+Broken access control is a flaw in a web application which is occur due to "poor implementation" of access control mechanism that can be easily exploited. This flaw allow attacker/unauthorised user to access the contents that they are not allowed to view, can perform unauthorised functions, even an attacker can delete the content, or take over site administration. There are many vulnerabilities which contribute to this risk, For instance, if the developer forgets to validate permissions when dealing with identifiers, the application becomes vulnerable to Insecure Direct Object Reference (IDOR). Other vulnerabilities include Cross-site Request Forgery (CSRF), Cross-Origin Resource Sharing (CORS) misconfigurations, directory traversal and forced browsing.
 
-Mitigation:
+or
+
+Broken access control occurs when an application fails to correctly enforce authorization rules that determine what actions users are allowed to perform. Access control is responsible for restricting users to only the resources they are permitted to access, such as their own accounts or personal data. When these restrictions are not properly implemented, attackers may gain unauthorized access to other users' information or perform privileged operations within the system. Broken access control is considered one of the most critical vulnerabilities because it can lead directly to account takeover, data exposure, or administrative access.
+
+One of the most common forms of broken access control is Insecure Direct Object Reference (IDOR). In many applications, objects such as user profiles, orders, invoices, or documents are referenced using identifiers like user_id, account_id, or order_id. If the server retrieves objects based only on these identifiers without validating ownership, attackers can simply modify the identifier to access another user's data. For example, changing a request from /api/profile?id=1001 to /api/profile?id=1002 may expose a different user's information if authorization checks are missing.
+
+From a pentesting perspective, discovering access control issues involves understanding how the application manages relationships between users and resources. Testers analyze API requests, identify object identifiers, and attempt to manipulate them to see if the application properly validates access rights. These vulnerabilities frequently appear in APIs, administrative panels, and file download endpoints.
+
+**Mitigation:**
 1) Proper implementations of access control to the users.
 2) Delete any inactive or unnecessary accounts.
 3) Shutdown unnecessary service and access point.
@@ -418,6 +426,7 @@ Image Credits: https://twitter.com/sec_r0
 ## Insecure Design
 
 Insecure design is focused on the risks associated with flaws in design and architecture. It focuses on the need for threat modeling, secure design patterns, and principles. The flaws in insecure design are not something that can be rectified by an implementation. OWASP differentiates insecure design from security implementation and controls as follows: An insecure design cannot be fixed by a perfect implementation as by definition, needed security controls were never created to defend against specific attacks. To exploit insecure design, attackers can threat model workflows in the software to reveal a broad range of vulnerabilities and weaknesses.
+
 Example:
 1) Attacker exploits a poorly designed API that does not properly filter input.
 2) The attacker scans for vulnerable APIs and identifies an API that does not properly filter input and does not use the organizations API security gateway.
@@ -668,7 +677,7 @@ Image Credits: https://twitter.com/sec_r0
 ![image](https://user-images.githubusercontent.com/16838353/196876341-7f06aaaf-4ff5-4bc5-922b-ead822d6ccbf.png)
 
 ## Contributing 
-- To Contribute in this Repo Send me direct message to My Twitter: [0xKayala](https://twitter.com/0xKayala)
+- To contribute to this Repo Send me a direct message on my Twitter: [0xKayala](https://twitter.com/0xKayala)
 
 ## Maintainers 
 
