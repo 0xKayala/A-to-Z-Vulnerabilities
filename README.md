@@ -302,7 +302,15 @@ This uses the scheme `http`, the domain `normal-website.com`, and the port numbe
 
 ## Cryptographic Failures
 
-A cryptographic failure is a critical web application security vulnerability that exposes sensitive application data on a weak or non-existent cryptographic algorithm. These can be passwords, patient health records, business secrets, credit card information, email addresses, or other personal user information. Apart from exposing sensitive information, as cryptographic failures can also compromise systems, the implications of this vulnerability are considered one of the most critical security risks for both organizations and business users
+A cryptographic failure is a critical web application security vulnerability that exposes sensitive application data on a weak or non-existent cryptographic algorithm. These can be passwords, patient health records, business secrets, credit card information, email addresses, or other personal user information. Apart from exposing sensitive information, as cryptographic failures can also compromise systems, the implications of this vulnerability are considered one of the most critical security risks for both organizations and business users.
+
+or
+
+Cryptographic failures occur when applications improperly protect sensitive data using encryption or fail to manage cryptographic keys securely. Encryption is meant to ensure that sensitive information remains confidential and cannot be easily interpreted by unauthorized parties. However, when encryption algorithms are weak, keys are improperly stored, or data is transmitted without secure protocols, attackers may recover or manipulate sensitive information.
+
+A common example of cryptographic failure is insecure implementation of JSON Web Tokens (JWT) used for authentication. JWT tokens contain encoded user data and are signed using a secret key. If the secret key is weak or leaked in source code, attackers can forge valid tokens and impersonate users with elevated privileges. Similarly, using outdated hashing algorithms like MD5 or SHA-1 for password storage can allow attackers to crack passwords using modern computing resources.
+
+Security testers analyze how applications handle encryption, token generation, and key storage. They inspect authentication cookies, analyze encryption algorithms, and search source code repositories for exposed secrets. Even small mistakes in cryptographic implementation can lead to serious data breaches.
 
 ## Code Injection
 
