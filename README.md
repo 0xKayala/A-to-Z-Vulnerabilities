@@ -182,6 +182,42 @@
 
 ---
 
+## Session Hijacking
+
+Session hijacking is an attack where the adversary takes control of a valid user session and uses it to impersonate the user. The attacker typically captures or predicts a session token, session cookie, or session ID, then presents it to the application to gain unauthorized access. This attack is especially dangerous because it can bypass normal login protections. The application believes the attacker is a legitimate user, so all access checks based on that session may pass. In interviews, you should define session hijacking clearly and mention that it is different from credential theft: hijacking targets the session state, not necessarily the login credentials themselves.
+
+**How Sessions Are Managed**
+Session management is the process of creating and maintaining user sessions after authentication. Applications usually issue a session identifier to the client, which is stored in a cookie, local storage, or another client-side mechanism.
+The server keeps track of active sessions or verifies session tokens on each request. A robust session management system enforces expiration, renewal, invalidation on logout, and protection against session fixation.
+
+Understanding the session lifecycle helps you explain why session hijacking is possible and where defenses should be placed. In an interview, mention these steps:
+1) Session creation after authentication.
+2) Session identifier issuance and storage.
+3) Session usage on protected requests.
+4) Session expiration, renewal, and logout handling.
+
+**How Session Hijacking Works**
+Session hijacking typically follows a clear attack flow. Attackers first obtain or guess a session identifier, then use it to impersonate the user without authenticating normally.
+
+Here is the common flow:
+**1) User logs in:** the application creates a session and issues a session ID.
+**2) Session ID sent:** the browser stores the session ID in a cookie or token.
+**3) Attacker steals ID:** the attacker captures or predicts the session value using a technique like sniffing or XSS.
+**4) Attacker uses ID:** the attacker sends the stolen session identifier to the application.
+**5) Server accepts ID:** the application validates the session ID and grants access as the legitimate user.
+
+One important interview point is that the attacker does not need the user's password once they have a valid session ID. That is why session protection is critical even after authentication is complete.
+
+**Mitigation:**
+1) Do not rely on client side only make the checks at the server side.
+2) Verifying the client side and taking decisions is very very dangerous.
+3) Use authentication based on strong tokens such as json web token mechanism.
+4) Use authentication based on encrypted data which can be AES for example.
+
+Source & Image Credits: https://www.debuggerlabs.com/p/session-hijacking-explained-interview.html
+
+<img width="1024" height="1536" alt="Session Hijacking" src="https://github.com/user-attachments/assets/240e1f85-4ca2-474d-a0c5-cfc199cf77f9" />
+
 ## Authentication Bypass
 
 An attacker gains access to application, service, or device with the privileges of an authorized or privileged user by evading or circumventing an authentication mechanism. The attacker is therefore able to access protected data without authentication ever having taken place. This refers to an attacker gaining access equivalent to an authenticated user without ever going through an authentication procedure. This is usually the result of the attacker using an unexpected access procedure that does not go through the proper checkpoints where authentication should occur. For example, a web site might assume that all users will click through a given link in order to get to secure material and simply authenticate everyone that clicks the link. However, an attacker might be able to reach secured web content by explicitly entering the path to the content rather than clicking through the authentication link, thereby avoiding the check entirely. This attack pattern differs from other authentication attacks in that attacks of this pattern avoid authentication entirely, rather than faking authentication by exploiting flaws or by stealing credentials from legitimate users.
