@@ -200,7 +200,7 @@ Understanding the session lifecycle helps you explain why session hijacking is p
 **How Session Hijacking Works** <br>
 Session hijacking typically follows a clear attack flow. Attackers first obtain or guess a session identifier, then use it to impersonate the user without authenticating normally.
 
-**Here is the common flow:**
+**Here is the common flow:** <br>
 **1) User logs in:** the application creates a session and issues a session ID.
 **2) Session ID sent:** the browser stores the session ID in a cookie or token.
 **3) Attacker steals ID:** the attacker captures or predicts the session value using a technique like sniffing or XSS.
