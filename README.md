@@ -187,6 +187,7 @@
 Session hijacking is an attack where the adversary takes control of a valid user session and uses it to impersonate the user. The attacker typically captures or predicts a session token, session cookie, or session ID, then presents it to the application to gain unauthorized access. This attack is especially dangerous because it can bypass normal login protections. The application believes the attacker is a legitimate user, so all access checks based on that session may pass. In interviews, you should define session hijacking clearly and mention that it is different from credential theft: hijacking targets the session state, not necessarily the login credentials themselves.
 
 **How Sessions Are Managed**
+
 Session management is the process of creating and maintaining user sessions after authentication. Applications usually issue a session identifier to the client, which is stored in a cookie, local storage, or another client-side mechanism.
 The server keeps track of active sessions or verifies session tokens on each request. A robust session management system enforces expiration, renewal, invalidation on logout, and protection against session fixation.
 
@@ -196,7 +197,7 @@ Understanding the session lifecycle helps you explain why session hijacking is p
 3) Session usage on protected requests.
 4) Session expiration, renewal, and logout handling.
 
-**How Session Hijacking Works**
+**How Session Hijacking Works** <br>
 Session hijacking typically follows a clear attack flow. Attackers first obtain or guess a session identifier, then use it to impersonate the user without authenticating normally.
 
 **Here is the common flow:**
